@@ -43,16 +43,16 @@
                 </span>
             </div>
             <div class="top-bar-right">
-                <span class="top-bar-item">
+                <span class="top-bar-item top-bar-email">
                     <i data-lucide="mail"></i>
                     <a href="mailto:suporte@mixcapital.com.br">suporte@mixcapital.com.br</a>
                 </span>
-                <span class="top-bar-item">
+                <span class="top-bar-item top-bar-phone">
                     <i data-lucide="phone"></i>
                     <a href="tel:2141490055">(21) 4149-0055</a>
                 </span>
-                <span class="top-bar-item">
-                    <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" style="color: #00BFFF; font-weight: 600;">
+                <span class="top-bar-item top-bar-portal">
+                    <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer">
                         Área do Cliente &rarr;
                     </a>
                 </span>
@@ -74,7 +74,7 @@
                     <ul class="nav-menu">
                         <li><a href="#solucoes" class="nav-link">Soluções</a></li>
                         <li><a href="#diferenciais" class="nav-link">Por que a Mix</a></li>
-                        <li><a href="#tecnologia" class="nav-link">Tecnologia & API</a></li>
+                        <li><a href="#tecnologia" class="nav-link">Tecnologia</a></li>
                         <li><a href="#tradicao" class="nav-link">Institucional</a></li>
                         <li><a href="#faq" class="nav-link">FAQ</a></li>
                         <li><button onclick="openContactModal()" class="nav-link">Contato</button></li>
@@ -103,7 +103,7 @@
                 <ul class="mobile-nav-list">
                     <li><a href="#solucoes" onclick="closeMobileMenu()">Soluções</a></li>
                     <li><a href="#diferenciais" onclick="closeMobileMenu()">Por que a Mix</a></li>
-                    <li><a href="#tecnologia" onclick="closeMobileMenu()">Tecnologia & API</a></li>
+                    <li><a href="#tecnologia" onclick="closeMobileMenu()">Tecnologia</a></li>
                     <li><a href="#tradicao" onclick="closeMobileMenu()">Institucional</a></li>
                     <li><a href="#faq" onclick="closeMobileMenu()">FAQ</a></li>
                     <li><button onclick="closeMobileMenu(); openContactModal();" style="color: var(--text-silver); font-size: 1rem; font-weight: 500; text-align: left; padding: 0.25rem 0;">Contato</button></li>
@@ -392,35 +392,35 @@
         <!-- Section 3: Deep Dive Spotlight Blocks (StoneX Alternating Blocks) -->
         <section id="tecnologia" class="spotlight-section">
             <div class="container">
-                <!-- Block 1: API & Infraestrutura -->
+                <!-- Block 1: Infraestrutura Tecnológica -->
                 <div class="spotlight-block">
                     <div class="spotlight-content">
                         <span class="badge-pill">
                             <span class="dot"></span>
-                            Tecnologia Desenvolvida para Escala
+                            Tecnologia & Alta Disponibilidade
                         </span>
-                        <h2 class="spotlight-title">API de Pagamentos Robusta, Rápida e Confiável</h2>
+                        <h2 class="spotlight-title">Infraestrutura Tecnológica e Conectividade para sua Empresa</h2>
                         <p class="spotlight-desc">
-                            Integre sua loja virtual, ERP, aplicativo móvel ou sistema interno com nossa API RESTful moderna e documentação clara para desenvolvedores.
+                            Nossas soluções financeiras são sustentadas por uma arquitetura robusta e moderna, garantindo processamento em tempo real, alta estabilidade e integração simplificada.
                         </p>
                         <ul class="spotlight-features-list">
                             <li class="spotlight-feature-item">
                                 <i data-lucide="check-circle-2"></i>
-                                <span>Webhooks com entrega garantida e retentativa automática.</span>
+                                <span>Notificações em tempo real com entrega garantida e conciliação instantânea.</span>
                             </li>
                             <li class="spotlight-feature-item">
                                 <i data-lucide="check-circle-2"></i>
-                                <span>Ambiente de testes (Sandbox) completo e simuladores de transação.</span>
+                                <span>Ambiente de alta escalabilidade com redundância e proteção contínua.</span>
                             </li>
                             <li class="spotlight-feature-item">
                                 <i data-lucide="check-circle-2"></i>
-                                <span>SDKs prontas e suporte direto da equipe de engenharia.</span>
+                                <span>Suporte técnico consultivo para conectar sua operação aos nossos serviços.</span>
                             </li>
                         </ul>
                         <div>
                             <button onclick="openContactModal()" class="btn btn-secondary">
-                                <i data-lucide="code"></i>
-                                Solicitar Documentação API
+                                <i data-lucide="headphones"></i>
+                                Falar com Consultor Técnico
                             </button>
                         </div>
                     </div>
@@ -428,24 +428,30 @@
                     <!-- Spotlight Visual Card -->
                     <div class="spotlight-visual-card">
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.75rem;">
-                            <span style="font-size: 0.8125rem; font-weight: 700; color: #00BFFF; text-transform: uppercase; letter-spacing: 0.05em;">API RESTful Status</span>
+                            <span style="font-size: 0.8125rem; font-weight: 700; color: #00BFFF; text-transform: uppercase; letter-spacing: 0.05em;">Status dos Sistemas</span>
                             <span style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.75rem; color: #38A169; font-weight: 600;">
                                 <span style="width: 8px; height: 8px; border-radius: 50%; background: #38A169; display: inline-block;"></span>
                                 100% Operacional
                             </span>
                         </div>
-                        <p style="font-size: 0.875rem; color: var(--text-silver); font-family: monospace; background: rgba(0,0,0,0.3); padding: 1rem; border-radius: var(--radius-sm); line-height: 1.5;">
-                            <span style="color: #00BFFF;">POST</span> /v1/payments/pix<br>
-                            {<br>
-                            &nbsp;&nbsp;"amount": 1500.00,<br>
-                            &nbsp;&nbsp;"split": { "recipient_id": "rec_mix" },<br>
-                            &nbsp;&nbsp;"status": "APPROVED"<br>
-                            }
-                        </p>
+                        <div style="background: rgba(0,0,0,0.25); padding: 1.25rem; border-radius: var(--radius-sm); display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.25rem;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                                <span style="color: var(--text-silver);">Conexão Gateway & PIX:</span>
+                                <strong style="color: #38A169;">Ativo & Instantâneo</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                                <span style="color: var(--text-silver);">Criptografia Ponta a Ponta:</span>
+                                <strong style="color: #00BFFF;">TLS 1.3 / AES-256</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                                <span style="color: var(--text-silver);">Monitoramento de Risco:</span>
+                                <strong style="color: #FFFFFF;">24/7 Ativo</strong>
+                            </div>
+                        </div>
                         <div class="visual-metric-grid">
                             <div class="metric-box">
                                 <div class="metric-box-val">&lt; 250ms</div>
-                                <div class="metric-box-lbl">Latência Média de API</div>
+                                <div class="metric-box-lbl">Tempo de Resposta</div>
                             </div>
                             <div class="metric-box">
                                 <div class="metric-box-val">99.98%</div>
@@ -698,7 +704,6 @@
                         <li><a href="#solucoes">Câmbio & Remessas</a></li>
                         <li><a href="#solucoes">Link de Pagamento</a></li>
                         <li><a href="#solucoes">Boleto Bancário</a></li>
-                        <li><a href="#tecnologia">API de Integração</a></li>
                     </ul>
                 </div>
 
