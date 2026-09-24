@@ -8,18 +8,180 @@ document.addEventListener('DOMContentLoaded', () => {
         window.lucide.createIcons();
     }
 
-    // 2. Setup FAQ Accordions
+    // 2. Initialize Premium Canvas Beams Hero
+    initPremiumHero();
+
+    // 3. Setup FAQ Accordions
     initFaqAccordion();
 
-    // 3. Setup Cookie Consent
+    // 4. Setup Cookie Consent
     initCookieConsent();
 
-    // 4. Setup Contact Form
+    // 5. Setup Contact Form
     initContactForm();
 
-    // 5. Setup Smooth Scrolling
+    // 6. Setup Smooth Scrolling
     initSmoothScroll();
 });
+
+/* ==========================================================================
+   Premium Hero (Canvas Light Beams & Text Rotator)
+   ========================================================================== */
+function initPremiumHero() {
+    const canvas = document.getElementById('hero-beam-canvas');
+    const noiseCanvas = document.getElementById('hero-noise-canvas');
+    const rotatorBox = document.getElementById('hero-rotator-box');
+
+    // Canvas Beams Engine
+    if (canvas && noiseCanvas) {
+        const ctx = canvas.getContext('2d');
+        const nCtx = noiseCanvas.getContext('2d');
+
+        if (ctx && nCtx) {
+            const LAYERS = 3;
+            const BEAMS_PER_LAYER = 8;
+            let beams = [];
+            let animId = null;
+
+            function createBeam(w, h, layer) {
+                const angle = -35 + Math.random() * 10;
+                const baseSpeed = 0.2 + layer * 0.2;
+                const baseOpacity = 0.08 + layer * 0.05;
+                const baseWidth = 10 + layer * 5;
+                return {
+                    x: Math.random() * w,
+                    y: Math.random() * h,
+                    width: baseWidth,
+                    length: h * 2.5,
+                    angle: angle,
+                    speed: baseSpeed + Math.random() * 0.2,
+                    opacity: baseOpacity + Math.random() * 0.1,
+                    pulse: Math.random() * Math.PI * 2,
+                    pulseSpeed: 0.01 + Math.random() * 0.015,
+                    layer: layer
+                };
+            }
+
+            function resizeCanvas() {
+                const dpr = window.devicePixelRatio || 1;
+                const heroEl = canvas.parentElement || document.body;
+                const width = heroEl.clientWidth || window.innerWidth;
+                const height = heroEl.clientHeight || window.innerHeight;
+
+                canvas.width = width * dpr;
+                canvas.height = height * dpr;
+                canvas.style.width = `${width}px`;
+                canvas.style.height = `${height}px`;
+                ctx.setTransform(1, 0, 0, 1, 0, 0);
+                ctx.scale(dpr, dpr);
+
+                noiseCanvas.width = width * dpr;
+                noiseCanvas.height = height * dpr;
+                noiseCanvas.style.width = `${width}px`;
+                noiseCanvas.style.height = `${height}px`;
+                nCtx.setTransform(1, 0, 0, 1, 0, 0);
+                nCtx.scale(dpr, dpr);
+
+                beams = [];
+                for (let layer = 1; layer <= LAYERS; layer++) {
+                    for (let i = 0; i < BEAMS_PER_LAYER; i++) {
+                        beams.push(createBeam(width, height, layer));
+                    }
+                }
+            }
+
+            function generateNoise() {
+                const imgData = nCtx.createImageData(noiseCanvas.width, noiseCanvas.height);
+                const data = imgData.data;
+                for (let i = 0; i < data.length; i += 4) {
+                    const v = Math.random() * 255;
+                    data[i] = v;
+                    data[i + 1] = v;
+                    data[i + 2] = v;
+                    data[i + 3] = 12;
+                }
+                nCtx.putImageData(imgData, 0, 0);
+            }
+
+            function drawBeam(beam) {
+                ctx.save();
+                ctx.translate(beam.x, beam.y);
+                ctx.rotate((beam.angle * Math.PI) / 180);
+
+                const pulsingOpacity = Math.min(1, beam.opacity * (0.8 + Math.sin(beam.pulse) * 0.4));
+                const gradient = ctx.createLinearGradient(0, 0, 0, beam.length);
+                gradient.addColorStop(0, 'rgba(0, 191, 255, 0)');
+                gradient.addColorStop(0.2, `rgba(0, 191, 255, ${pulsingOpacity * 0.5})`);
+                gradient.addColorStop(0.5, `rgba(0, 220, 255, ${pulsingOpacity})`);
+                gradient.addColorStop(0.8, `rgba(0, 191, 255, ${pulsingOpacity * 0.5})`);
+                gradient.addColorStop(1, 'rgba(0, 191, 255, 0)');
+
+                ctx.fillStyle = gradient;
+                ctx.filter = `blur(${2 + beam.layer * 2}px)`;
+                ctx.fillRect(-beam.width / 2, 0, beam.width, beam.length);
+                ctx.restore();
+            }
+
+            function animate() {
+                const heroEl = canvas.parentElement || document.body;
+                const width = heroEl.clientWidth || window.innerWidth;
+                const height = heroEl.clientHeight || window.innerHeight;
+
+                const gradient = ctx.createLinearGradient(0, 0, 0, height);
+                gradient.addColorStop(0, '#04060A');
+                gradient.addColorStop(1, '#0D1117');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, width, height);
+
+                beams.forEach((beam) => {
+                    beam.y -= beam.speed * (beam.layer / LAYERS + 0.5);
+                    beam.pulse += beam.pulseSpeed;
+                    if (beam.y + beam.length < -50) {
+                        beam.y = height + 50;
+                        beam.x = Math.random() * width;
+                    }
+                    drawBeam(beam);
+                });
+
+                generateNoise();
+                animId = requestAnimationFrame(animate);
+            }
+
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+            animate();
+        }
+    }
+
+    // Rotating Words Loop
+    if (rotatorBox) {
+        const titles = ["inteligentes", "ágeis", "seguras", "escaláveis", "completas"];
+        let currentIdx = 0;
+
+        rotatorBox.innerHTML = '';
+        titles.forEach((title, idx) => {
+            const span = document.createElement('span');
+            span.className = `hero-rotator-word ${idx === 0 ? 'active' : ''}`;
+            span.textContent = title;
+            rotatorBox.appendChild(span);
+        });
+
+        const wordSpans = rotatorBox.querySelectorAll('.hero-rotator-word');
+
+        setInterval(() => {
+            const prevIdx = currentIdx;
+            currentIdx = (currentIdx + 1) % titles.length;
+
+            if (wordSpans[prevIdx]) {
+                wordSpans[prevIdx].className = 'hero-rotator-word exit';
+            }
+            if (wordSpans[currentIdx]) {
+                wordSpans[currentIdx].className = 'hero-rotator-word active';
+            }
+        }, 2500);
+    }
+}
+
 
 /* ==========================================================================
    Mobile Menu Toggle

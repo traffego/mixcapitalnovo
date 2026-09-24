@@ -124,70 +124,56 @@
     <!-- Main Page Content -->
     <main>
 
-        <!-- Hero Section (StoneX Bank Corporate Style) -->
-        <section class="hero-section">
-            <div class="container">
-                <div class="hero-grid">
-                    <!-- Left Hero Content -->
-                    <div class="hero-content">
-                        <div>
-                            <span class="badge-pill dark">
-                                <span class="dot"></span>
-                                Gateway de Pagamentos & Conta Digital
-                            </span>
-                        </div>
+        <!-- Hero Section (Premium Canvas Beams & Animated Text) -->
+        <section class="hero-premium-section">
+            <canvas id="hero-noise-canvas" class="hero-canvas-noise"></canvas>
+            <canvas id="hero-beam-canvas" class="hero-canvas-beams"></canvas>
 
-                        <h1 class="hero-title">
-                            Soluções completas em pagamentos para sua empresa <span class="text-gradient">ir além</span>
-                        </h1>
+            <div class="hero-premium-container">
+                <!-- Top Badge Link -->
+                <a href="#solucoes" class="hero-top-badge">
+                    <span>Gateway de Pagamentos & Conta Digital PJ</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
 
-                        <p class="hero-description">
-                            Com a <strong>MIX CAPITAL</strong> você tem um ecossistema completo: PIX instantâneo, Cartões, Boletos, Câmbio e Conta Digital PJ com aprovação ágil, taxas competitivas e segurança regulatória.
-                        </p>
+                <!-- Headline with Rotating Word -->
+                <h1 class="hero-headline">
+                    <span class="hero-headline-static">Soluções de Pagamento</span>
+                    <span class="hero-rotator-box" id="hero-rotator-box">
+                        <span class="hero-rotator-word active">inteligentes</span>
+                    </span>
+                </h1>
 
-                        <div class="hero-cta-group">
-                            <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-                                Abra sua conta
-                                <i data-lucide="arrow-right"></i>
-                            </a>
-                            <button onclick="openContactModal()" class="btn btn-ghost-white btn-lg">
-                                <i data-lucide="message-square"></i>
-                                Falar com Especialista
-                            </button>
-                        </div>
+                <!-- Subtitle -->
+                <p class="hero-subheadline">
+                    Ecossistema completo em gateway multi-adquirente, PIX instantâneo 24/7, boletos, cartões e câmbio com aprovação ágil, taxas competitivas e máxima segurança.
+                </p>
 
-                        <!-- Trust Bar -->
-                        <div class="hero-trust-bar">
-                            <div class="trust-item">
-                                <span class="dot"></span>
-                                <span>Banco Central Homologado</span>
-                            </div>
-                            <div class="trust-item">
-                                <span class="dot"></span>
-                                <span>Certificação PCI DSS Level 1</span>
-                            </div>
-                            <div class="trust-item">
-                                <span class="dot"></span>
-                                <span>99.9% Uptime Garantido</span>
-                            </div>
-                        </div>
+                <!-- Actions -->
+                <div class="hero-actions-row">
+                    <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                        Abra sua conta
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                    <button onclick="openContactModal()" class="btn btn-ghost-white btn-lg">
+                        <i data-lucide="phone-call"></i>
+                        Falar com Especialista
+                    </button>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="hero-trust-indicators">
+                    <div class="trust-item">
+                        <span class="dot"></span>
+                        <span>Banco Central Homologado</span>
                     </div>
-
-                    <!-- Right Hero Media Presentation Card -->
-                    <div class="hero-media-wrap">
-                        <div class="hero-card">
-                            <img src="assets/images/hero-dashboard.jpg" alt="Painel Operacional MIX CAPITAL" class="hero-card-img">
-                            
-                            <!-- Floating Badges -->
-                            <div class="floating-pill pill-top">
-                                <i data-lucide="zap"></i>
-                                <span>PIX Instantâneo 24/7</span>
-                            </div>
-                            <div class="floating-pill pill-bottom">
-                                <i data-lucide="shield-check"></i>
-                                <span>Segurança e Antifraude</span>
-                            </div>
-                        </div>
+                    <div class="trust-item">
+                        <span class="dot"></span>
+                        <span>Certificação PCI DSS Level 1</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="dot"></span>
+                        <span>99.9% Uptime Garantido</span>
                     </div>
                 </div>
             </div>
