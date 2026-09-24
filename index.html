@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <title>MIX CAPITAL | Gateway de Pagamentos, Conta Digital & Soluções Financeiras</title>
+    <meta name="description" content="Ecossistema completo em soluções de pagamento, gateway multi-adquirente, PIX instantâneo, boletos, câmbio e conta digital para sua empresa. Segurança PCI DSS e liquidação ágil." />
+    <meta name="author" content="MIX CAPITAL GTW LTDA" />
+    <meta name="keywords" content="gateway de pagamentos, banco de câmbio, PIX empresarial, conta digital PJ, link de pagamento, boleto registrado, conciliação financeira, MIX CAPITAL" />
+
+    <!-- Open Graph / Meta Social -->
+    <meta property="og:title" content="MIX CAPITAL | Soluções Financeiras e Gateway de Pagamentos" />
+    <meta property="og:description" content="Revolucione as transações da sua empresa com tecnologia bancária de ponta, taxas competitivas e máxima segurança." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mixcapital.com.br/" />
+    <meta property="og:image" content="assets/images/hero-dashboard.jpg" />
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+    <!-- Top Utility Bar (StoneX Style) -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span class="top-bar-item">
+                    <i data-lucide="shield-check"></i>
+                    <span>Ambiente Seguro & Homologado</span>
+                </span>
+                <span class="top-bar-item">
+                    <i data-lucide="clock"></i>
+                    <span>Atendimento Corporativo: Seg - Sex 09h às 18h</span>
+                </span>
+            </div>
+            <div class="top-bar-right">
+                <span class="top-bar-item">
+                    <i data-lucide="mail"></i>
+                    <a href="mailto:suporte@mixcapital.com.br">suporte@mixcapital.com.br</a>
+                </span>
+                <span class="top-bar-item">
+                    <i data-lucide="phone"></i>
+                    <a href="tel:2141490055">(21) 4149-0055</a>
+                </span>
+                <span class="top-bar-item">
+                    <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" style="color: #00BFFF; font-weight: 600;">
+                        Área do Cliente &rarr;
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Brand Logo -->
+                <a href="#" class="brand-logo" aria-label="MIX CAPITAL Página Inicial">
+                    <img src="assets/images/logo.png" alt="Logotipo MIX CAPITAL" class="brand-logo-img">
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#solucoes" class="nav-link">Soluções</a></li>
+                        <li><a href="#diferenciais" class="nav-link">Por que a Mix</a></li>
+                        <li><a href="#tecnologia" class="nav-link">Tecnologia & API</a></li>
+                        <li><a href="#tradicao" class="nav-link">Institucional</a></li>
+                        <li><a href="#faq" class="nav-link">FAQ</a></li>
+                        <li><button onclick="openContactModal()" class="nav-link">Contato</button></li>
+                    </ul>
+                </nav>
+
+                <!-- Action CTAs -->
+                <div class="nav-actions">
+                    <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-white btn-sm">
+                        Acessar Conta
+                    </a>
+                    <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                        Abra sua conta
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="nav-toggle-btn" onclick="toggleMobileMenu()" aria-label="Abrir menu mobile">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-menu-drawer" class="mobile-menu-drawer">
+                <ul class="mobile-nav-list">
+                    <li><a href="#solucoes" onclick="closeMobileMenu()">Soluções</a></li>
+                    <li><a href="#diferenciais" onclick="closeMobileMenu()">Por que a Mix</a></li>
+                    <li><a href="#tecnologia" onclick="closeMobileMenu()">Tecnologia & API</a></li>
+                    <li><a href="#tradicao" onclick="closeMobileMenu()">Institucional</a></li>
+                    <li><a href="#faq" onclick="closeMobileMenu()">FAQ</a></li>
+                    <li><button onclick="closeMobileMenu(); openContactModal();" style="color: var(--text-silver); font-size: 1rem; font-weight: 500; text-align: left; padding: 0.25rem 0;">Contato</button></li>
+                </ul>
+                <div class="mobile-menu-actions">
+                    <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-white btn-full">
+                        Acessar Conta
+                    </a>
+                    <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">
+                        Abra sua conta
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Page Content -->
+    <main>
+
+        <!-- Hero Section (StoneX Bank Corporate Style) -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <!-- Left Hero Content -->
+                    <div class="hero-content">
+                        <div>
+                            <span class="badge-pill dark">
+                                <span class="dot"></span>
+                                Gateway de Pagamentos & Conta Digital
+                            </span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            Soluções completas em pagamentos para sua empresa <span class="text-gradient">ir além</span>
+                        </h1>
+
+                        <p class="hero-description">
+                            Com a <strong>MIX CAPITAL</strong> você tem um ecossistema completo: PIX instantâneo, Cartões, Boletos, Câmbio e Conta Digital PJ com aprovação ágil, taxas competitivas e segurança regulatória.
+                        </p>
+
+                        <div class="hero-cta-group">
+                            <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                                Abra sua conta
+                                <i data-lucide="arrow-right"></i>
+                            </a>
+                            <button onclick="openContactModal()" class="btn btn-ghost-white btn-lg">
+                                <i data-lucide="message-square"></i>
+                                Falar com Especialista
+                            </button>
+                        </div>
+
+                        <!-- Trust Bar -->
+                        <div class="hero-trust-bar">
+                            <div class="trust-item">
+                                <span class="dot"></span>
+                                <span>Banco Central Homologado</span>
+                            </div>
+                            <div class="trust-item">
+                                <span class="dot"></span>
+                                <span>Certificação PCI DSS Level 1</span>
+                            </div>
+                            <div class="trust-item">
+                                <span class="dot"></span>
+                                <span>99.9% Uptime Garantido</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Media Presentation Card -->
+                    <div class="hero-media-wrap">
+                        <div class="hero-card">
+                            <img src="assets/images/hero-dashboard.jpg" alt="Painel Operacional MIX CAPITAL" class="hero-card-img">
+                            
+                            <!-- Floating Badges -->
+                            <div class="floating-pill pill-top">
+                                <i data-lucide="zap"></i>
+                                <span>PIX Instantâneo 24/7</span>
+                            </div>
+                            <div class="floating-pill pill-bottom">
+                                <i data-lucide="shield-check"></i>
+                                <span>Segurança e Antifraude</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Por que realizar operações com a MIX CAPITAL? (StoneX Features Layout) -->
+        <section id="diferenciais" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Diferenciais Competitivos</span>
+                    <h2 class="section-title">Por que operar com a MIX CAPITAL?</h2>
+                    <p class="section-desc">
+                        Combinamos tecnologia bancária de ponta, segurança de nível internacional e atendimento consultivo humanizado para transformar a rotina financeira da sua empresa.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <!-- Feature Card 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <i data-lucide="trending-down"></i>
+                        </div>
+                        <span class="feature-badge">Custos Otimizados</span>
+                        <h3 class="feature-title">Taxas Competitivas</h3>
+                        <p class="feature-description">
+                            Condições comerciais justas, transparentes e sem taxas ocultas, desenhadas para aumentar as margens do seu negócio.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 2 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <span class="feature-badge">Agilidade Operacional</span>
+                        <h3 class="feature-title">Sem Burocracias</h3>
+                        <p class="feature-description">
+                            Cadastro simplificado, esteira digital rápida e aprovação de conta em até 24 horas para você começar a vender imediatamente.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <i data-lucide="shield"></i>
+                        </div>
+                        <span class="feature-badge">Padrão Internacional</span>
+                        <h3 class="feature-title">Segurança Máxima</h3>
+                        <p class="feature-description">
+                            Criptografia de última geração com certificação PCI DSS Level 1 e monitoramento contínuo antifraude.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <i data-lucide="headphones"></i>
+                        </div>
+                        <span class="feature-badge">Suporte Dedicado</span>
+                        <h3 class="feature-title">Atendimento Consultivo</h3>
+                        <p class="feature-description">
+                            Time especializado e suporte humanizado sempre ao seu lado para otimizar suas transações e integrações técnicas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Conheça nossas soluções em operações de pagamento (StoneX Bento Grid) -->
+        <section id="solucoes" class="section-padding solutions-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Portfólio Completo</span>
+                    <h2 class="section-title">Conheça nossas soluções integradas</h2>
+                    <p class="section-desc">
+                        Tudo o que sua operação precisa para gerenciar recebimentos, vendas digitais e transferências em uma única plataforma unificada.
+                    </p>
+                </div>
+
+                <div class="solutions-grid">
+                    <!-- Solution 1: Gateway de Pagamento -->
+                    <div class="solution-card">
+                        <div class="solution-card-header">
+                            <div class="solution-icon-wrap">
+                                <i data-lucide="credit-card"></i>
+                            </div>
+                            <h3 class="solution-card-title">Gateway de Pagamento</h3>
+                        </div>
+                        <p class="solution-card-desc">
+                            Infraestrutura de alta conversão multi-adquirente para aceitar cartões de crédito e débito das principais bandeiras.
+                        </p>
+                        <ul class="solution-items-list">
+                            <li class="solution-item-row"><span class="bullet"></span>Checkout transparente e customizado</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Retentativa inteligente e antifraude</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Painel completo de conciliação</li>
+                        </ul>
+                        <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="solution-action-link">
+                            <span>Contratar gateway</span>
+                            <i data-lucide="chevron-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Solution 2: PIX Instantâneo -->
+                    <div class="solution-card">
+                        <div class="solution-card-header">
+                            <div class="solution-icon-wrap">
+                                <i data-lucide="qr-code"></i>
+                            </div>
+                            <h3 class="solution-card-title">PIX para Empresas</h3>
+                        </div>
+                        <p class="solution-card-desc">
+                            Receba transferências instantâneas 24/7 com QR Code dinâmico, menor custo operacional e liquidação imediata.
+                        </p>
+                        <ul class="solution-items-list">
+                            <li class="solution-item-row"><span class="bullet"></span>Liquidação em tempo real</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Split automático de pagamentos</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Webhooks de notificação instantânea</li>
+                        </ul>
+                        <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="solution-action-link">
+                            <span>Conhecer PIX PJ</span>
+                            <i data-lucide="chevron-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Solution 3: Conta Digital PJ -->
+                    <div class="solution-card">
+                        <div class="solution-card-header">
+                            <div class="solution-icon-wrap">
+                                <i data-lucide="wallet"></i>
+                            </div>
+                            <h3 class="solution-card-title">Conta Digital PJ</h3>
+                        </div>
+                        <p class="solution-card-desc">
+                            Conta corporativa integrada para movimentar seu saldo, realizar TED/PIX e emitir cartões empresariais.
+                        </p>
+                        <ul class="solution-items-list">
+                            <li class="solution-item-row"><span class="bullet"></span>Cartão físico e virtual corporativo</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Extrato financeiro em tempo real</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Gestão multi-usuários</li>
+                        </ul>
+                        <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="solution-action-link">
+                            <span>Abrir conta digital</span>
+                            <i data-lucide="chevron-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Solution 4: Câmbio & Operações Internacionais -->
+                    <div class="solution-card">
+                        <div class="solution-card-header">
+                            <div class="solution-icon-wrap">
+                                <i data-lucide="arrow-left-right"></i>
+                            </div>
+                            <h3 class="solution-card-title">Câmbio & Remessas</h3>
+                        </div>
+                        <p class="solution-card-desc">
+                            Conversão de moedas e transferências internacionais com taxas competitivas e suporte documental completo.
+                        </p>
+                        <ul class="solution-items-list">
+                            <li class="solution-item-row"><span class="bullet"></span>Câmbio spot e operações comerciais</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Enquadramento e conformidade BACEN</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Assessoria tributária e cambial</li>
+                        </ul>
+                        <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="solution-action-link">
+                            <span>Consultar câmbio</span>
+                            <i data-lucide="chevron-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Solution 5: Link de Pagamento -->
+                    <div class="solution-card">
+                        <div class="solution-card-header">
+                            <div class="solution-icon-wrap">
+                                <i data-lucide="link"></i>
+                            </div>
+                            <h3 class="solution-card-title">Link de Pagamento</h3>
+                        </div>
+                        <p class="solution-card-desc">
+                            Venda à distância pelas redes sociais, WhatsApp ou e-mail sem precisar de loja virtual ou site complexo.
+                        </p>
+                        <ul class="solution-items-list">
+                            <li class="solution-item-row"><span class="bullet"></span>Geração rápida de links personalizados</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Múltiplas opções de parcelamento</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Acompanhamento de status em tempo real</li>
+                        </ul>
+                        <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="solution-action-link">
+                            <span>Gerar links</span>
+                            <i data-lucide="chevron-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Solution 6: Boleto Bancário Inteligente -->
+                    <div class="solution-card">
+                        <div class="solution-card-header">
+                            <div class="solution-icon-wrap">
+                                <i data-lucide="file-text"></i>
+                            </div>
+                            <h3 class="solution-card-title">Boleto Bancário</h3>
+                        </div>
+                        <p class="solution-card-desc">
+                            Emissão automática com registro online instantâneo, conciliação e régua de cobrança personalizada.
+                        </p>
+                        <ul class="solution-items-list">
+                            <li class="solution-item-row"><span class="bullet"></span>Vencimento flexível e alteração de dados</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Cálculo automático de multas e juros</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Baixa e conciliação 100% automatizada</li>
+                        </ul>
+                        <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="solution-action-link">
+                            <span>Emitir boletos</span>
+                            <i data-lucide="chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Deep Dive Spotlight Blocks (StoneX Alternating Blocks) -->
+        <section id="tecnologia" class="spotlight-section">
+            <div class="container">
+                <!-- Block 1: API & Infraestrutura -->
+                <div class="spotlight-block">
+                    <div class="spotlight-content">
+                        <span class="badge-pill">
+                            <span class="dot"></span>
+                            Tecnologia Desenvolvida para Escala
+                        </span>
+                        <h2 class="spotlight-title">API de Pagamentos Robusta, Rápida e Confiável</h2>
+                        <p class="spotlight-desc">
+                            Integre sua loja virtual, ERP, aplicativo móvel ou sistema interno com nossa API RESTful moderna e documentação clara para desenvolvedores.
+                        </p>
+                        <ul class="spotlight-features-list">
+                            <li class="spotlight-feature-item">
+                                <i data-lucide="check-circle-2"></i>
+                                <span>Webhooks com entrega garantida e retentativa automática.</span>
+                            </li>
+                            <li class="spotlight-feature-item">
+                                <i data-lucide="check-circle-2"></i>
+                                <span>Ambiente de testes (Sandbox) completo e simuladores de transação.</span>
+                            </li>
+                            <li class="spotlight-feature-item">
+                                <i data-lucide="check-circle-2"></i>
+                                <span>SDKs prontas e suporte direto da equipe de engenharia.</span>
+                            </li>
+                        </ul>
+                        <div>
+                            <button onclick="openContactModal()" class="btn btn-secondary">
+                                <i data-lucide="code"></i>
+                                Solicitar Documentação API
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Spotlight Visual Card -->
+                    <div class="spotlight-visual-card">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.75rem;">
+                            <span style="font-size: 0.8125rem; font-weight: 700; color: #00BFFF; text-transform: uppercase; letter-spacing: 0.05em;">API RESTful Status</span>
+                            <span style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.75rem; color: #38A169; font-weight: 600;">
+                                <span style="width: 8px; height: 8px; border-radius: 50%; background: #38A169; display: inline-block;"></span>
+                                100% Operacional
+                            </span>
+                        </div>
+                        <p style="font-size: 0.875rem; color: var(--text-silver); font-family: monospace; background: rgba(0,0,0,0.3); padding: 1rem; border-radius: var(--radius-sm); line-height: 1.5;">
+                            <span style="color: #00BFFF;">POST</span> /v1/payments/pix<br>
+                            {<br>
+                            &nbsp;&nbsp;"amount": 1500.00,<br>
+                            &nbsp;&nbsp;"split": { "recipient_id": "rec_mix" },<br>
+                            &nbsp;&nbsp;"status": "APPROVED"<br>
+                            }
+                        </p>
+                        <div class="visual-metric-grid">
+                            <div class="metric-box">
+                                <div class="metric-box-val">&lt; 250ms</div>
+                                <div class="metric-box-lbl">Latência Média de API</div>
+                            </div>
+                            <div class="metric-box">
+                                <div class="metric-box-val">99.98%</div>
+                                <div class="metric-box-lbl">Disponibilidade do Cluster</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Block 2: Câmbio e Operações Corporativas -->
+                <div class="spotlight-block reverse">
+                    <div class="spotlight-content">
+                        <span class="badge-pill">
+                            <span class="dot"></span>
+                            Comércio Exterior & Remessas
+                        </span>
+                        <h2 class="spotlight-title">Câmbio e Pagamentos Internacionais Sem Complicação</h2>
+                        <p class="spotlight-desc">
+                            Facilitamos as operações financeiras entre sua empresa e fornecedores ou clientes no exterior, cuidando de todo o processo de enquadramento regulatório.
+                        </p>
+                        <ul class="spotlight-features-list">
+                            <li class="spotlight-feature-item">
+                                <i data-lucide="check-circle-2"></i>
+                                <span>Cotações cambiais transparentes e competitivas.</span>
+                            </li>
+                            <li class="spotlight-feature-item">
+                                <i data-lucide="check-circle-2"></i>
+                                <span>Suporte completo em análise documental e tributária.</span>
+                            </li>
+                            <li class="spotlight-feature-item">
+                                <i data-lucide="check-circle-2"></i>
+                                <span>Segurança e conformidade direta com normas do BACEN.</span>
+                            </li>
+                        </ul>
+                        <div>
+                            <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                <i data-lucide="globe"></i>
+                                Iniciar Operação Cambial
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Visual Card 2 -->
+                    <div class="spotlight-visual-card">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.75rem;">
+                            <span style="font-size: 0.8125rem; font-weight: 700; color: #00BFFF; text-transform: uppercase;">Mesa de Operações Cambiais</span>
+                            <span style="font-size: 0.75rem; color: var(--text-silver);">Liquidação D+0 / D+2</span>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.25); padding: 1.25rem; border-radius: var(--radius-sm); display: flex; flex-direction: column; gap: 0.75rem;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                                <span style="color: var(--text-silver);">Remessa Comercial:</span>
+                                <strong style="color: #FFFFFF;">USD / EUR / BRL</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                                <span style="color: var(--text-silver);">Enquadramento BACEN:</span>
+                                <strong style="color: #38A169;">Homologado</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                                <span style="color: var(--text-silver);">Canais de Liquidação:</span>
+                                <strong style="color: #00BFFF;">Integrado Swift</strong>
+                            </div>
+                        </div>
+                        <div class="visual-metric-grid">
+                            <div class="metric-box">
+                                <div class="metric-box-val">100%</div>
+                                <div class="metric-box-lbl">Conformidade Legal</div>
+                            </div>
+                            <div class="metric-box">
+                                <div class="metric-box-val">24h</div>
+                                <div class="metric-box-lbl">Prazo Médio de Execução</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Tradição e Números no Mercado (StoneX Stats Bar) -->
+        <section id="tradicao" class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">R$ 500M+</div>
+                        <div class="stat-label">Volume Processado</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10.000+</div>
+                        <div class="stat-label">Empresas e Clientes Ativos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime de Plataforma</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">&lt; 1s</div>
+                        <div class="stat-label">Tempo Médio de Resposta</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Perguntas Frequentes / FAQ (StoneX Accordion Style) -->
+        <section id="faq" class="section-padding faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Tire suas Dúvidas</span>
+                    <h2 class="section-title">Perguntas Frequentes</h2>
+                    <p class="section-desc">
+                        Encontre respostas diretas para as dúvidas mais comuns sobre nossos serviços financeiros, tecnologia e abertura de conta.
+                    </p>
+                </div>
+
+                <div class="faq-accordion">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item">
+                        <button class="faq-header" aria-expanded="false">
+                            <span>O que é a MIX CAPITAL e como funciona o gateway?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-body">
+                            <div class="faq-body-content">
+                                A MIX CAPITAL é uma instituição especializada em soluções financeiras e gateway de pagamentos corporativo. Nossa plataforma integra cartões, PIX instantâneo, boletos e conta digital em um ambiente unificado e seguro, proporcionando alta taxa de conversão e gestão em tempo real.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item">
+                        <button class="faq-header" aria-expanded="false">
+                            <span>Quem pode contratar as soluções da MIX CAPITAL?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-body">
+                            <div class="faq-body-content">
+                                Nossos serviços atendem pessoas jurídicas (empresas de todos os portes, comércios eletrônicos, prestadores de serviços, indústrias e distribuidoras) e profissionais que necessitam de infraestrutura robusta para emissão de cobranças, recebimento de vendas e gestão financeira.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item">
+                        <button class="faq-header" aria-expanded="false">
+                            <span>Como funciona o recebimento via PIX e prazos de liquidação?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-body">
+                            <div class="faq-body-content">
+                                As cobranças realizadas via PIX contam com liquidação instantânea em sua Conta Digital MIX CAPITAL. Você tem acesso imediato aos recursos para pagamentos, transferências ou saques, com extrato detalhado e confirmação em tempo real por webhook.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="faq-item">
+                        <button class="faq-header" aria-expanded="false">
+                            <span>A MIX CAPITAL realiza operações de câmbio e remessas internacionais?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-body">
+                            <div class="faq-body-content">
+                                Sim. Oferecemos suporte completo para operações de câmbio spot, pagamentos a fornecedores no exterior e recebimento de recursos internacionais, garantindo total conformidade com as exigências regulatórias do Banco Central do Brasil.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="faq-item">
+                        <button class="faq-header" aria-expanded="false">
+                            <span>Quais são os padrões de segurança e certificações adotadas?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-body">
+                            <div class="faq-body-content">
+                                Operamos com certificação internacional PCI DSS Level 1, criptografia ponta a ponta (TLS/SSL de 256 bits), monitoramento antifraude 24/7 e rígida política de conformidade com a LGPD (Lei Geral de Proteção de Dados).
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="faq-item">
+                        <button class="faq-header" aria-expanded="false">
+                            <span>Quanto tempo leva para aprovação da conta PJ?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-body">
+                            <div class="faq-body-content">
+                                Nosso processo de credenciamento é 100% digital. Após o envio dos documentos cadastrais da empresa, a análise e liberação da conta ocorrem em até 24 horas úteis.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Call To Action Banner (StoneX High-Impact Card) -->
+        <section class="cta-banner-section">
+            <div class="container">
+                <div class="cta-banner-card">
+                    <span class="badge-pill dark" style="margin-bottom: 1rem;">
+                        <span class="dot"></span>
+                        Pronto para começar?
+                    </span>
+                    <h2 class="cta-banner-title">
+                        Transforme a gestão de pagamentos do seu negócio hoje mesmo
+                    </h2>
+                    <p class="cta-banner-desc">
+                        Abra sua conta na MIX CAPITAL e conte com tecnologia de ponta, taxas competitivas e suporte dedicado.
+                    </p>
+                    <div class="cta-banner-actions">
+                        <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                            Abra sua conta agora
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <button onclick="openContactModal()" class="btn btn-ghost-white btn-lg">
+                            <i data-lucide="phone-call"></i>
+                            Falar com um Consultor
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (StoneX Multi-Column Institutional Style) -->
+    <footer class="main-footer">
+        <div class="container">
+            <!-- Top Footer Grid -->
+            <div class="footer-top-grid">
+                <!-- Col 1: Brand & Social -->
+                <div class="footer-brand-col">
+                    <img src="assets/images/logo.png" alt="Logotipo MIX CAPITAL" class="footer-logo-img">
+                    <p class="footer-about-text">
+                        Ecossistema completo em gateway de pagamentos, conta digital PJ, PIX, boletos e operações de câmbio para impulsionar empresas no mercado nacional e internacional.
+                    </p>
+                    <div class="footer-social-links">
+                        <a href="#" class="footer-social-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="footer-social-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Soluções -->
+                <div>
+                    <h4 class="footer-col-title">Soluções</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#solucoes">Gateway de Pagamentos</a></li>
+                        <li><a href="#solucoes">PIX para Empresas</a></li>
+                        <li><a href="#solucoes">Conta Digital PJ</a></li>
+                        <li><a href="#solucoes">Câmbio & Remessas</a></li>
+                        <li><a href="#solucoes">Link de Pagamento</a></li>
+                        <li><a href="#solucoes">Boleto Bancário</a></li>
+                        <li><a href="#tecnologia">API de Integração</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Institucional -->
+                <div>
+                    <h4 class="footer-col-title">Institucional</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#diferenciais">Sobre a MIX CAPITAL</a></li>
+                        <li><a href="#diferenciais">Diferenciais e Taxas</a></li>
+                        <li><a href="#tradicao">Estrutura e Governança</a></li>
+                        <li><a href="#faq">Perguntas Frequentes</a></li>
+                        <li><button onclick="openContactModal()">Fale Conosco</button></li>
+                        <li><a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer">Acesso ao Internet Banking</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contato & Sede -->
+                <div>
+                    <h4 class="footer-col-title">Contato & Sede</h4>
+                    <div class="footer-contact-info">
+                        <div class="footer-contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>suporte@mixcapital.com.br</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>(21) 4149-0055</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <div>
+                                Avenida Julio de SA Bierrenbach Alm 00065<br>
+                                Blc 004 Sal 0422 - Jacarepaguá<br>
+                                Rio de Janeiro - RJ, Brasil | CEP: 22775-028
+                            </div>
+                        </div>
+                        <div style="font-size: 0.75rem; color: var(--foreground-subtle); margin-top: 0.5rem;">
+                            <strong>Razão Social:</strong> MIX CAPITAL GTW LTDA<br>
+                            <strong>CNPJ:</strong> 61.853.820/0001-10
+                        </div>
+                        <div class="footer-cert-badges">
+                            <span class="cert-badge">PCI DSS Level 1</span>
+                            <span class="cert-badge">BACEN</span>
+                            <span class="cert-badge">ISO 27001</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Institutional Legal Disclaimer (StoneX Model) -->
+            <div class="footer-disclaimer-box">
+                <p class="disclaimer-text">
+                    A <strong>MIX CAPITAL GTW LTDA</strong> (CNPJ 61.853.820/0001-10) atua como instituição de pagamento e correspondente de instituições financeiras autorizadas a funcionar pelo Banco Central do Brasil. A contratação de produtos e serviços está sujeita à análise de conformidade, verificação cadastral e condições contratuais vigentes. As transações são processadas sob estritos protocolos de segurança da informação e certificação PCI DSS. As informações contidas neste website têm finalidade exclusivamente institucional e informativa.
+                </p>
+            </div>
+
+            <!-- Bottom Legal Bar -->
+            <div class="footer-bottom-bar">
+                <div>
+                    © 2026 MIX CAPITAL GTW LTDA. Todos os direitos reservados.
+                </div>
+                <div class="footer-legal-links">
+                    <button onclick="openPrivacyModal()">Política de Privacidade</button>
+                    <button onclick="openTermsModal()">Termos de Uso</button>
+                    <button onclick="openPrivacyModal()">LGPD</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3 id="contact-modal-title" class="modal-title">Fale com a MIX CAPITAL</h3>
+                <button class="modal-close-btn" onclick="closeContactModal()" aria-label="Fechar modal">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="contact-form">
+                    <div class="form-grid">
+                        <div class="form-grid two-col">
+                            <div class="form-group">
+                                <label for="form-name" class="form-label">Nome Completo *</label>
+                                <input type="text" id="form-name" name="name" class="form-input" placeholder="Seu nome ou da empresa" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-phone" class="form-label">Telefone / WhatsApp *</label>
+                                <input type="tel" id="form-phone" name="phone" class="form-input" placeholder="(00) 00000-0000" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-email" class="form-label">E-mail Corporativo *</label>
+                            <input type="email" id="form-email" name="email" class="form-input" placeholder="seu.email@empresa.com.br" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-subject" class="form-label">Assunto de Interesse *</label>
+                            <input type="text" id="form-subject" name="subject" class="form-input" placeholder="Ex: Gateway, PIX, Câmbio ou Conta Digital" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message" class="form-label">Mensagem *</label>
+                            <textarea id="form-message" name="message" class="form-textarea" placeholder="Descreva sua necessidade ou volume estimado..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full" style="margin-top: 0.5rem;">
+                            <i data-lucide="send"></i>
+                            Enviar Mensagem
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- LGPD Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p class="cookie-text">
+            Utilizamos cookies para oferecer a melhor experiência, analisar o tráfego e garantir a segurança das operações, em conformidade com a LGPD.
+        </p>
+        <div class="cookie-actions">
+            <button onclick="acceptCookies()" class="btn btn-primary btn-sm">Aceitar Todos</button>
+            <button onclick="declineCookies()" class="btn btn-ghost-white btn-sm">Apenas Essenciais</button>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Action -->
+    <a href="https://wa.me/5521996654829" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contato direto via WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0C7.163 0 0 7.163 0 16c0 2.828.738 5.583 2.139 7.989L.434 30.863a.999.999 0 001.302 1.302l6.874-1.705A15.946 15.946 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333c-2.576 0-5.099-.745-7.261-2.151a1 1 0 00-.764-.117l-4.608 1.143 1.143-4.608a1 1 0 00-.117-.764A13.278 13.278 0 012.667 16c0-7.364 5.969-13.333 13.333-13.333S29.333 8.636 29.333 16 23.364 29.333 16 29.333z"/>
+            <path d="M23.247 19.433c-.387-.194-2.292-1.131-2.647-1.26-.355-.129-.614-.194-.873.194-.258.387-1.003 1.26-1.229 1.519-.226.258-.452.29-.839.097-.387-.194-1.634-.603-3.113-1.922-1.151-1.027-1.928-2.295-2.154-2.682-.226-.387-.024-.597.17-.79.174-.174.387-.452.581-.678.194-.226.258-.387.387-.645.129-.258.065-.484-.032-.678-.097-.194-.873-2.103-1.196-2.878-.314-.754-.634-.651-.873-.663-.226-.011-.484-.013-.742-.013s-.678.097-1.034.484c-.355.387-1.357 1.326-1.357 3.234s1.389 3.75 1.583 4.008c.194.258 2.735 4.177 6.625 5.856.926.4 1.649.638 2.212.817.929.295 1.775.253 2.443.153.745-.111 2.292-.937 2.615-1.842.323-.905.323-1.681.226-1.842-.097-.161-.355-.258-.742-.452z"/>
+        </svg>
+    </a>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
