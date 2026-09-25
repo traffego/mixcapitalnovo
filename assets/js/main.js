@@ -155,7 +155,7 @@ function initPremiumHero() {
 
     // Rotating Words Loop
     if (rotatorBox) {
-        const titles = ["inteligentes", "ágeis", "seguras", "escaláveis", "completas"];
+        const titles = ["competitivas", "seguras", "estratégicas", "ágeis", "globais"];
         let currentIdx = 0;
 
         rotatorBox.innerHTML = '';

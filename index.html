@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/images/logo.png" type="image/png">
-    <title>MIX CAPITAL | Gateway de Pagamentos, Conta Digital & Soluções Financeiras</title>
-    <meta name="description" content="Ecossistema completo em soluções de pagamento, gateway multi-adquirente, PIX instantâneo, boletos, câmbio e conta digital para sua empresa. Segurança PCI DSS e liquidação ágil." />
+    <title>MIX CAPITAL | Banco & Câmbio Comercial para Empresas</title>
+    <meta name="description" content="Mesa de câmbio corporativo especializada em câmbio pronto (spot), câmbio futuro, hedge cambial (NDF), importação, exportação e capitais estrangeiros. Atendimento consultivo sob a Resolução BCB nº 277/2022." />
     <meta name="author" content="MIX CAPITAL GTW LTDA" />
-    <meta name="keywords" content="gateway de pagamentos, banco de câmbio, PIX empresarial, conta digital PJ, link de pagamento, boleto registrado, conciliação financeira, MIX CAPITAL" />
+    <meta name="keywords" content="câmbio comercial, câmbio para empresas, mesa de câmbio, NDF hedge cambial, câmbio pronto spot, câmbio futuro, importação exportação, remessas internacionais corporativas, novo marco cambial, MIX CAPITAL" />
 
     <!-- Open Graph / Meta Social -->
-    <meta property="og:title" content="MIX CAPITAL | Soluções Financeiras e Gateway de Pagamentos" />
-    <meta property="og:description" content="Revolucione as transações da sua empresa com tecnologia bancária de ponta, taxas competitivas e máxima segurança." />
+    <meta property="og:title" content="MIX CAPITAL | Banco & Câmbio Comercial para Empresas" />
+    <meta property="og:description" content="Assessoria completa em operações cambiais corporativas: Câmbio Pronto, Câmbio Futuro, Hedge NDF, Comércio Exterior e Capitais Internacionais com taxas competitivas." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mixcapital.com.br/" />
     <meta property="og:image" content="assets/images/hero-dashboard.jpg" />
@@ -35,11 +35,11 @@
             <div class="top-bar-left">
                 <span class="top-bar-item">
                     <i data-lucide="shield-check"></i>
-                    <span>Ambiente Seguro & Homologado</span>
+                    <span>Mesa de Câmbio Corporativo | Homologado BACEN</span>
                 </span>
                 <span class="top-bar-item">
                     <i data-lucide="clock"></i>
-                    <span>Atendimento Corporativo: Seg - Sex 09h às 18h</span>
+                    <span>Horário da Mesa: Seg - Sex 09h às 18h</span>
                 </span>
             </div>
             <div class="top-bar-right">
@@ -72,12 +72,13 @@
                 <!-- Desktop Navigation Menu -->
                 <nav>
                     <ul class="nav-menu">
-                        <li><a href="#solucoes" class="nav-link">Soluções</a></li>
+                        <li><a href="#solucoes" class="nav-link">Soluções Cambiais</a></li>
                         <li><a href="#diferenciais" class="nav-link">Por que a Mix</a></li>
-                        <li><a href="#tecnologia" class="nav-link">Tecnologia</a></li>
+                        <li><a href="#hedge" class="nav-link">Hedge & NDF</a></li>
+                        <li><a href="#comex" class="nav-link">Comex & Capitais</a></li>
                         <li><a href="#tradicao" class="nav-link">Institucional</a></li>
                         <li><a href="#faq" class="nav-link">FAQ</a></li>
-                        <li><button onclick="openContactModal()" class="nav-link">Contato</button></li>
+                        <li><button onclick="openContactModal()" class="nav-link">Mesa de Câmbio</button></li>
                     </ul>
                 </nav>
 
@@ -86,10 +87,10 @@
                     <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-white btn-sm">
                         Acessar Conta
                     </a>
-                    <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                        Abra sua conta
+                    <button onclick="openContactModal()" class="btn btn-primary btn-sm">
+                        Cotar Câmbio
                         <i data-lucide="arrow-right"></i>
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -101,21 +102,22 @@
             <!-- Mobile Dropdown Menu -->
             <div id="mobile-menu-drawer" class="mobile-menu-drawer">
                 <ul class="mobile-nav-list">
-                    <li><a href="#solucoes" onclick="closeMobileMenu()">Soluções</a></li>
+                    <li><a href="#solucoes" onclick="closeMobileMenu()">Soluções Cambiais</a></li>
                     <li><a href="#diferenciais" onclick="closeMobileMenu()">Por que a Mix</a></li>
-                    <li><a href="#tecnologia" onclick="closeMobileMenu()">Tecnologia</a></li>
+                    <li><a href="#hedge" onclick="closeMobileMenu()">Hedge & NDF</a></li>
+                    <li><a href="#comex" onclick="closeMobileMenu()">Comex & Capitais</a></li>
                     <li><a href="#tradicao" onclick="closeMobileMenu()">Institucional</a></li>
                     <li><a href="#faq" onclick="closeMobileMenu()">FAQ</a></li>
-                    <li><button onclick="closeMobileMenu(); openContactModal();" style="color: var(--text-silver); font-size: 1rem; font-weight: 500; text-align: left; padding: 0.25rem 0;">Contato</button></li>
+                    <li><button onclick="closeMobileMenu(); openContactModal();" style="color: var(--text-silver); font-size: 1rem; font-weight: 500; text-align: left; padding: 0.25rem 0;">Mesa de Câmbio</button></li>
                 </ul>
                 <div class="mobile-menu-actions">
                     <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-white btn-full">
                         Acessar Conta
                     </a>
-                    <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">
-                        Abra sua conta
+                    <button onclick="closeMobileMenu(); openContactModal();" class="btn btn-primary btn-full">
+                        Cotar Câmbio
                         <i data-lucide="arrow-right"></i>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -132,61 +134,65 @@
             <div class="hero-premium-container">
                 <!-- Top Badge Link -->
                 <a href="#solucoes" class="hero-top-badge">
-                    <span>Gateway de Pagamentos & Conta Digital PJ</span>
+                    <span>Mesa de Câmbio Corporativo & Comércio Exterior</span>
                     <i data-lucide="arrow-right"></i>
                 </a>
 
                 <!-- Headline with Rotating Word -->
                 <h1 class="hero-headline">
-                    <span class="hero-headline-static">Soluções de Pagamento</span>
+                    <span class="hero-headline-static">Operações de Câmbio</span>
                     <span class="hero-rotator-box" id="hero-rotator-box">
-                        <span class="hero-rotator-word active">inteligentes</span>
+                        <span class="hero-rotator-word active">competitivas</span>
                     </span>
                 </h1>
 
                 <!-- Subtitle -->
                 <p class="hero-subheadline">
-                    Ecossistema completo em gateway multi-adquirente, PIX instantâneo 24/7, boletos, cartões e câmbio com aprovação ágil, taxas competitivas e máxima segurança.
+                    Assessoria consultiva completa em câmbio pronto (spot), câmbio futuro, proteção contra volatilidade (NDF) e pagamentos internacionais para empresas importadoras, exportadoras e multinacionais.
                 </p>
 
                 <!-- Actions -->
                 <div class="hero-actions-row">
-                    <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-                        Abra sua conta
+                    <button onclick="openContactModal()" class="btn btn-primary btn-lg">
+                        Falar com Operador de Câmbio
                         <i data-lucide="arrow-right"></i>
-                    </a>
-                    <button onclick="openContactModal()" class="btn btn-ghost-white btn-lg">
-                        <i data-lucide="phone-call"></i>
-                        Falar com Especialista
                     </button>
+                    <a href="#solucoes" class="btn btn-ghost-white btn-lg">
+                        <i data-lucide="compass"></i>
+                        Conhecer Soluções Cambiais
+                    </a>
                 </div>
 
                 <!-- Trust Indicators -->
                 <div class="hero-trust-indicators">
                     <div class="trust-item">
                         <span class="dot"></span>
-                        <span>Banco Central Homologado</span>
+                        <span>Autorizado Banco Central (BACEN)</span>
                     </div>
                     <div class="trust-item">
                         <span class="dot"></span>
-                        <span>Certificação PCI DSS Level 1</span>
+                        <span>Resolução BCB nº 277/2022</span>
                     </div>
                     <div class="trust-item">
                         <span class="dot"></span>
-                        <span>99.9% Uptime Garantido</span>
+                        <span>Mais de 140 Moedas Globais</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="dot"></span>
+                        <span>Liquidação Ágil D+0 a D+2</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 1: Por que realizar operações com a MIX CAPITAL? (StoneX Features Layout) -->
+        <!-- Section 1: Por que realizar operações de câmbio com a MIX CAPITAL? -->
         <section id="diferenciais" class="section-padding">
             <div class="container">
                 <div class="section-header">
                     <span class="section-subtitle">Diferenciais Competitivos</span>
-                    <h2 class="section-title">Por que operar com a MIX CAPITAL?</h2>
+                    <h2 class="section-title">Por que realizar operações de câmbio com a MIX CAPITAL?</h2>
                     <p class="section-desc">
-                        Combinamos tecnologia bancária de ponta, segurança de nível internacional e atendimento consultivo humanizado para transformar a rotina financeira da sua empresa.
+                        Combinamos acesso direto aos mercados internacionais, spreads competitivos e suporte documental especializado para proteger suas margens e impulsionar suas transações transfronteiriças.
                     </p>
                 </div>
 
@@ -196,10 +202,10 @@
                         <div class="feature-icon-box">
                             <i data-lucide="trending-down"></i>
                         </div>
-                        <span class="feature-badge">Custos Otimizados</span>
+                        <span class="feature-badge">Spread Otimizado</span>
                         <h3 class="feature-title">Taxas Competitivas</h3>
                         <p class="feature-description">
-                            Condições comerciais justas, transparentes e sem taxas ocultas, desenhadas para aumentar as margens do seu negócio.
+                            Cotações em tempo real conectadas aos principais provedores globais de liquidez, garantindo spreads justos e economia em cada fechamento cambial.
                         </p>
                     </div>
 
@@ -208,22 +214,22 @@
                         <div class="feature-icon-box">
                             <i data-lucide="zap"></i>
                         </div>
-                        <span class="feature-badge">Agilidade Operacional</span>
-                        <h3 class="feature-title">Sem Burocracias</h3>
+                        <span class="feature-badge">Novo Marco Cambial</span>
+                        <h3 class="feature-title">Enquadramento em até 24h</h3>
                         <p class="feature-description">
-                            Cadastro simplificado, esteira digital rápida e aprovação de conta em até 24 horas para você começar a vender imediatamente.
+                            Análise documental ágil e classificação simplificada da natureza da operação conforme a Lei nº 14.286/2021 e Resolução BCB nº 277/2022.
                         </p>
                     </div>
 
                     <!-- Feature Card 3 -->
                     <div class="feature-card">
                         <div class="feature-icon-box">
-                            <i data-lucide="shield"></i>
+                            <i data-lucide="shield-check"></i>
                         </div>
-                        <span class="feature-badge">Padrão Internacional</span>
-                        <h3 class="feature-title">Segurança Máxima</h3>
+                        <span class="feature-badge">Conformidade Regulatória</span>
+                        <h3 class="feature-title">Segurança & Compliance</h3>
                         <p class="feature-description">
-                            Criptografia de última geração com certificação PCI DSS Level 1 e monitoramento contínuo antifraude.
+                            Total observância às normas do Banco Central, prevenção à lavagem de dinheiro (PLD/FT), proteção de dados e formalização transparente.
                         </p>
                     </div>
 
@@ -232,296 +238,296 @@
                         <div class="feature-icon-box">
                             <i data-lucide="headphones"></i>
                         </div>
-                        <span class="feature-badge">Suporte Dedicado</span>
+                        <span class="feature-badge">Mesa Especializada</span>
                         <h3 class="feature-title">Atendimento Consultivo</h3>
                         <p class="feature-description">
-                            Time especializado e suporte humanizado sempre ao seu lado para otimizar suas transações e integrações técnicas.
+                            Operadores certificados e dedicados para orientar sua empresa no timing ideal de fechamento, estratégias de hedge e mitigação de riscos.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 2: Conheça nossas soluções em operações de pagamento (StoneX Bento Grid) -->
+        <!-- Section 2: Conheça nossas soluções completas em câmbio empresarial (StoneX Bento Grid) -->
         <section id="solucoes" class="section-padding solutions-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-subtitle">Portfólio Completo</span>
-                    <h2 class="section-title">Conheça nossas soluções integradas</h2>
+                    <span class="section-subtitle">Soluções Corporativas</span>
+                    <h2 class="section-title">Conheça nossas soluções em operações de câmbio</h2>
                     <p class="section-desc">
-                        Tudo o que sua operação precisa para gerenciar recebimentos, vendas digitais e transferências em uma única plataforma unificada.
+                        Estrutura completa para empresas que importam, exportam, prestam serviços globais ou realizam movimentações de capital com o exterior.
                     </p>
                 </div>
 
                 <div class="solutions-grid">
-                    <!-- Solution 1: Gateway de Pagamento -->
-                    <div class="solution-card">
-                        <div class="solution-card-header">
-                            <div class="solution-icon-wrap">
-                                <i data-lucide="credit-card"></i>
-                            </div>
-                            <h3 class="solution-card-title">Gateway de Pagamento</h3>
-                        </div>
-                        <p class="solution-card-desc">
-                            Infraestrutura de alta conversão multi-adquirente para aceitar cartões de crédito e débito das principais bandeiras.
-                        </p>
-                        <ul class="solution-items-list">
-                            <li class="solution-item-row"><span class="bullet"></span>Checkout transparente e customizado</li>
-                            <li class="solution-item-row"><span class="bullet"></span>Retentativa inteligente e antifraude</li>
-                            <li class="solution-item-row"><span class="bullet"></span>Painel completo de conciliação</li>
-                        </ul>
-                        <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="solution-action-link">
-                            <span>Contratar gateway</span>
-                            <i data-lucide="chevron-right"></i>
-                        </a>
-                    </div>
-
-                    <!-- Solution 2: PIX Instantâneo -->
-                    <div class="solution-card">
-                        <div class="solution-card-header">
-                            <div class="solution-icon-wrap">
-                                <i data-lucide="qr-code"></i>
-                            </div>
-                            <h3 class="solution-card-title">PIX para Empresas</h3>
-                        </div>
-                        <p class="solution-card-desc">
-                            Receba transferências instantâneas 24/7 com QR Code dinâmico, menor custo operacional e liquidação imediata.
-                        </p>
-                        <ul class="solution-items-list">
-                            <li class="solution-item-row"><span class="bullet"></span>Liquidação em tempo real</li>
-                            <li class="solution-item-row"><span class="bullet"></span>Split automático de pagamentos</li>
-                            <li class="solution-item-row"><span class="bullet"></span>Webhooks de notificação instantânea</li>
-                        </ul>
-                        <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="solution-action-link">
-                            <span>Conhecer PIX PJ</span>
-                            <i data-lucide="chevron-right"></i>
-                        </a>
-                    </div>
-
-                    <!-- Solution 3: Conta Digital PJ -->
-                    <div class="solution-card">
-                        <div class="solution-card-header">
-                            <div class="solution-icon-wrap">
-                                <i data-lucide="wallet"></i>
-                            </div>
-                            <h3 class="solution-card-title">Conta Digital PJ</h3>
-                        </div>
-                        <p class="solution-card-desc">
-                            Conta corporativa integrada para movimentar seu saldo, realizar TED/PIX e emitir cartões empresariais.
-                        </p>
-                        <ul class="solution-items-list">
-                            <li class="solution-item-row"><span class="bullet"></span>Cartão físico e virtual corporativo</li>
-                            <li class="solution-item-row"><span class="bullet"></span>Extrato financeiro em tempo real</li>
-                            <li class="solution-item-row"><span class="bullet"></span>Gestão multi-usuários</li>
-                        </ul>
-                        <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="solution-action-link">
-                            <span>Abrir conta digital</span>
-                            <i data-lucide="chevron-right"></i>
-                        </a>
-                    </div>
-
-                    <!-- Solution 4: Câmbio & Operações Internacionais -->
+                    <!-- Solution 1: Câmbio Pronto (Spot) -->
                     <div class="solution-card">
                         <div class="solution-card-header">
                             <div class="solution-icon-wrap">
                                 <i data-lucide="arrow-left-right"></i>
                             </div>
-                            <h3 class="solution-card-title">Câmbio & Remessas</h3>
+                            <h3 class="solution-card-title">Câmbio Pronto (FX Spot)</h3>
                         </div>
                         <p class="solution-card-desc">
-                            Conversão de moedas e transferências internacionais com taxas competitivas e suporte documental completo.
+                            Compra e venda de moedas estrangeiras com liquidação imediata em até 2 dias úteis (D+0, D+1 ou D+2) para necessidades correntes de caixa.
                         </p>
                         <ul class="solution-items-list">
-                            <li class="solution-item-row"><span class="bullet"></span>Câmbio spot e operações comerciais</li>
-                            <li class="solution-item-row"><span class="bullet"></span>Enquadramento e conformidade BACEN</li>
-                            <li class="solution-item-row"><span class="bullet"></span>Assessoria tributária e cambial</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Pagamentos e recebimentos imediatos</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Acompanhamento de cotação em tempo real</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Cálculo automático de IOF e tributos</li>
                         </ul>
-                        <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="solution-action-link">
-                            <span>Consultar câmbio</span>
+                        <button onclick="openContactModal()" class="solution-action-link">
+                            <span>Cotar câmbio spot</span>
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Solution 2: Câmbio Futuro (Forward) -->
+                    <div class="solution-card">
+                        <div class="solution-card-header">
+                            <div class="solution-icon-wrap">
+                                <i data-lucide="calendar-clock"></i>
+                            </div>
+                            <h3 class="solution-card-title">Câmbio Futuro (FX Forward)</h3>
+                        </div>
+                        <p class="solution-card-desc">
+                            Fixação antecipada da taxa cambial para liquidação futura com entrega física. Elimine surpresas e garanta previsibilidade orçamentária.
+                        </p>
+                        <ul class="solution-items-list">
+                            <li class="solution-item-row"><span class="bullet"></span>Trava de taxa para compras programadas</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Proteção de fluxo de caixa futuro</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Datas de liquidação customizadas</li>
+                        </ul>
+                        <button onclick="openContactModal()" class="solution-action-link">
+                            <span>Travar taxa futura</span>
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Solution 3: NDF / Hedge Cambial -->
+                    <div class="solution-card">
+                        <div class="solution-card-header">
+                            <div class="solution-icon-wrap">
+                                <i data-lucide="shield"></i>
+                            </div>
+                            <h3 class="solution-card-title">Proteção Cambial (NDF)</h3>
+                        </div>
+                        <p class="solution-card-desc">
+                            Contrato a termo de moeda (Non-Deliverable Forward) sem entrega física, com liquidação do ajuste financeiro em Reais no vencimento.
+                        </p>
+                        <ul class="solution-items-list">
+                            <li class="solution-item-row"><span class="bullet"></span>Blindagem contra oscilações cambiais</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Sem desembolso inicial de capital</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Ajuste indexado à taxa PTAX</li>
+                        </ul>
+                        <a href="#hedge" class="solution-action-link">
+                            <span>Conhecer estruturas NDF</span>
                             <i data-lucide="chevron-right"></i>
                         </a>
                     </div>
 
-                    <!-- Solution 5: Link de Pagamento -->
+                    <!-- Solution 4: Importação e Exportação (Comex) -->
                     <div class="solution-card">
                         <div class="solution-card-header">
                             <div class="solution-icon-wrap">
-                                <i data-lucide="link"></i>
+                                <i data-lucide="ship"></i>
                             </div>
-                            <h3 class="solution-card-title">Link de Pagamento</h3>
+                            <h3 class="solution-card-title">Importação & Exportação</h3>
                         </div>
                         <p class="solution-card-desc">
-                            Venda à distância pelas redes sociais, WhatsApp ou e-mail sem precisar de loja virtual ou site complexo.
+                            Fechamento cambial ágil para faturas comerciais, cartas de crédito, fretes e demurrage com conferência de documentos de embarque.
                         </p>
                         <ul class="solution-items-list">
-                            <li class="solution-item-row"><span class="bullet"></span>Geração rápida de links personalizados</li>
-                            <li class="solution-item-row"><span class="bullet"></span>Múltiplas opções de parcelamento</li>
-                            <li class="solution-item-row"><span class="bullet"></span>Acompanhamento de status em tempo real</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Liquidação direta a fornecedores externos</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Internalização rápida de receitas exportadoras</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Enquadramento documental completo</li>
                         </ul>
-                        <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="solution-action-link">
-                            <span>Gerar links</span>
+                        <a href="#comex" class="solution-action-link">
+                            <span>Operar comércio exterior</span>
                             <i data-lucide="chevron-right"></i>
                         </a>
                     </div>
 
-                    <!-- Solution 6: Boleto Bancário Inteligente -->
+                    <!-- Solution 5: Capitais Estrangeiros & Financeiro -->
                     <div class="solution-card">
                         <div class="solution-card-header">
                             <div class="solution-icon-wrap">
-                                <i data-lucide="file-text"></i>
+                                <i data-lucide="landmark"></i>
                             </div>
-                            <h3 class="solution-card-title">Boleto Bancário</h3>
+                            <h3 class="solution-card-title">Capitais Internacionais</h3>
                         </div>
                         <p class="solution-card-desc">
-                            Emissão automática com registro online instantâneo, conciliação e régua de cobrança personalizada.
+                            Aporte de capital (IED), empréstimos intercompany, dividendos, repatriação e redução de capital com registro formal no sistema BACEN.
                         </p>
                         <ul class="solution-items-list">
-                            <li class="solution-item-row"><span class="bullet"></span>Vencimento flexível e alteração de dados</li>
-                            <li class="solution-item-row"><span class="bullet"></span>Cálculo automático de multas e juros</li>
-                            <li class="solution-item-row"><span class="bullet"></span>Baixa e conciliação 100% automatizada</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Registro de Investimento Direto (RDE-IED)</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Empréstimos externos e créditos mútuos</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Remessa e recebimento de lucros</li>
                         </ul>
-                        <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="solution-action-link">
-                            <span>Emitir boletos</span>
+                        <button onclick="openContactModal()" class="solution-action-link">
+                            <span>Consultar capitais</span>
                             <i data-lucide="chevron-right"></i>
-                        </a>
+                        </button>
+                    </div>
+
+                    <!-- Solution 6: Serviços & Royalties Internacionais -->
+                    <div class="solution-card">
+                        <div class="solution-card-header">
+                            <div class="solution-icon-wrap">
+                                <i data-lucide="file-check"></i>
+                            </div>
+                            <h3 class="solution-card-title">Serviços & Royalties</h3>
+                        </div>
+                        <p class="solution-card-desc">
+                            Remessas para pagamento de softwares (SaaS), licenças, consultorias técnicas internacionais e royalties com assessoria tributária.
+                        </p>
+                        <ul class="solution-items-list">
+                            <li class="solution-item-row"><span class="bullet"></span>Cálculo de retenções (IRRF, IOF, CIDE)</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Análise de contratos de prestação de serviços</li>
+                            <li class="solution-item-row"><span class="bullet"></span>Comprovantes Swift imediatos</li>
+                        </ul>
+                        <button onclick="openContactModal()" class="solution-action-link">
+                            <span>Pagar serviços globais</span>
+                            <i data-lucide="chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3: Deep Dive Spotlight Blocks (StoneX Alternating Blocks) -->
-        <section id="tecnologia" class="spotlight-section">
+        <!-- Section 3: Deep Dive Spotlight Blocks (Hedge NDF & Comex) -->
+        <section class="spotlight-section">
             <div class="container">
-                <!-- Block 1: Infraestrutura Tecnológica -->
-                <div class="spotlight-block">
+                <!-- Block 1: Hedge Cambial e NDF -->
+                <div id="hedge" class="spotlight-block">
                     <div class="spotlight-content">
                         <span class="badge-pill">
                             <span class="dot"></span>
-                            Tecnologia & Alta Disponibilidade
+                            Gestão de Risco Cambial
                         </span>
-                        <h2 class="spotlight-title">Infraestrutura Tecnológica e Conectividade para sua Empresa</h2>
+                        <h2 class="spotlight-title">Hedge Cambial e NDF: Blindagem Contra a Volatilidade das Moedas</h2>
                         <p class="spotlight-desc">
-                            Nossas soluções financeiras são sustentadas por uma arquitetura robusta e moderna, garantindo processamento em tempo real, alta estabilidade e integração simplificada.
+                            As variações bruscas das moedas estrangeiras podem corroer a margem de lucro de contratos comerciais e compromissos futuros. Com operações de <strong>NDF (Non-Deliverable Forward)</strong>, sua empresa garante previsibilidade sem imobilizar o caixa.
                         </p>
                         <ul class="spotlight-features-list">
                             <li class="spotlight-feature-item">
                                 <i data-lucide="check-circle-2"></i>
-                                <span>Notificações em tempo real com entrega garantida e conciliação instantânea.</span>
+                                <span><strong>Sem entrega física:</strong> no vencimento ocorre apenas a liquidação da diferença em Reais contra a PTAX.</span>
                             </li>
                             <li class="spotlight-feature-item">
                                 <i data-lucide="check-circle-2"></i>
-                                <span>Ambiente de alta escalabilidade com redundância e proteção contínua.</span>
+                                <span><strong>Prazos e volumes customizados:</strong> estruturas moldadas exatamente ao fluxo de pagamentos ou recebimentos da sua empresa.</span>
                             </li>
                             <li class="spotlight-feature-item">
                                 <i data-lucide="check-circle-2"></i>
-                                <span>Suporte técnico consultivo para conectar sua operação aos nossos serviços.</span>
+                                <span><strong>Proteção do orçamento:</strong> elimine a incerteza cambial nas margens de importação e exportação.</span>
                             </li>
                         </ul>
                         <div>
                             <button onclick="openContactModal()" class="btn btn-secondary">
-                                <i data-lucide="headphones"></i>
-                                Falar com Consultor Técnico
+                                <i data-lucide="shield"></i>
+                                Estruturar Hedge com a Mesa
                             </button>
                         </div>
                     </div>
 
-                    <!-- Spotlight Visual Card -->
+                    <!-- Spotlight Visual Card 1 -->
                     <div class="spotlight-visual-card">
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.75rem;">
-                            <span style="font-size: 0.8125rem; font-weight: 700; color: #00BFFF; text-transform: uppercase; letter-spacing: 0.05em;">Status dos Sistemas</span>
+                            <span style="font-size: 0.8125rem; font-weight: 700; color: #00BFFF; text-transform: uppercase; letter-spacing: 0.05em;">Operação NDF / Trava</span>
                             <span style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.75rem; color: #38A169; font-weight: 600;">
                                 <span style="width: 8px; height: 8px; border-radius: 50%; background: #38A169; display: inline-block;"></span>
-                                100% Operacional
+                                Risco Cambial Neutralizado
                             </span>
                         </div>
                         <div style="background: rgba(0,0,0,0.25); padding: 1.25rem; border-radius: var(--radius-sm); display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.25rem;">
                             <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
-                                <span style="color: var(--text-silver);">Conexão Gateway & PIX:</span>
-                                <strong style="color: #38A169;">Ativo & Instantâneo</strong>
+                                <span style="color: var(--text-silver);">Taxa Contratada (Trava):</span>
+                                <strong style="color: #00BFFF;">Taxa Fixada no Fechamento</strong>
                             </div>
                             <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
-                                <span style="color: var(--text-silver);">Criptografia Ponta a Ponta:</span>
-                                <strong style="color: #00BFFF;">TLS 1.3 / AES-256</strong>
+                                <span style="color: var(--text-silver);">Liquidação:</span>
+                                <strong style="color: #FFFFFF;">Diferencial PTAX em BRL</strong>
                             </div>
                             <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
-                                <span style="color: var(--text-silver);">Monitoramento de Risco:</span>
-                                <strong style="color: #FFFFFF;">24/7 Ativo</strong>
+                                <span style="color: var(--text-silver);">Entrega Física da Moeda:</span>
+                                <strong style="color: #38A169;">Dispensada (Zero Desembolso)</strong>
                             </div>
                         </div>
                         <div class="visual-metric-grid">
                             <div class="metric-box">
-                                <div class="metric-box-val">&lt; 250ms</div>
-                                <div class="metric-box-lbl">Tempo de Resposta</div>
+                                <div class="metric-box-val">0%</div>
+                                <div class="metric-box-lbl">Exposição a Oscilações</div>
                             </div>
                             <div class="metric-box">
-                                <div class="metric-box-val">99.98%</div>
-                                <div class="metric-box-lbl">Disponibilidade do Cluster</div>
+                                <div class="metric-box-val">100%</div>
+                                <div class="metric-box-lbl">Previsibilidade Financeira</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Block 2: Câmbio e Operações Corporativas -->
-                <div class="spotlight-block reverse">
+                <!-- Block 2: Comex & Enquadramento Regulatório -->
+                <div id="comex" class="spotlight-block reverse">
                     <div class="spotlight-content">
                         <span class="badge-pill">
                             <span class="dot"></span>
-                            Comércio Exterior & Remessas
+                            Novo Marco Cambial (Lei 14.286)
                         </span>
-                        <h2 class="spotlight-title">Câmbio e Pagamentos Internacionais Sem Complicação</h2>
+                        <h2 class="spotlight-title">Assessoria Documental e Enquadramento Sem Burocracia</h2>
                         <p class="spotlight-desc">
-                            Facilitamos as operações financeiras entre sua empresa e fornecedores ou clientes no exterior, cuidando de todo o processo de enquadramento regulatório.
+                            A nova regulamentação cambial do Banco Central conferiu maior agilidade às empresas, mas exige precisão na classificação da natureza das operações. Cuidamos de todo o processo regulatório para sua empresa operar com tranquilidade.
                         </p>
                         <ul class="spotlight-features-list">
                             <li class="spotlight-feature-item">
                                 <i data-lucide="check-circle-2"></i>
-                                <span>Cotações cambiais transparentes e competitivas.</span>
+                                <span><strong>Análise prévia de documentos:</strong> conferência de faturas comerciais (commercial invoice), conhecimentos de embarque (BL/AWB) e contratos.</span>
                             </li>
                             <li class="spotlight-feature-item">
                                 <i data-lucide="check-circle-2"></i>
-                                <span>Suporte completo em análise documental e tributária.</span>
+                                <span><strong>Enquadramento BACEN:</strong> identificação do código exato da operação nos termos da Resolução BCB nº 277/2022.</span>
                             </li>
                             <li class="spotlight-feature-item">
                                 <i data-lucide="check-circle-2"></i>
-                                <span>Segurança e conformidade direta com normas do BACEN.</span>
+                                <span><strong>Comprovantes internacionais Swift:</strong> envio imediato de mensagens MT103 para confirmação direta com o beneficiário no exterior.</span>
                             </li>
                         </ul>
                         <div>
-                            <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                                <i data-lucide="globe"></i>
-                                Iniciar Operação Cambial
-                            </a>
+                            <button onclick="openContactModal()" class="btn btn-secondary">
+                                <i data-lucide="file-text"></i>
+                                Consultar Enquadramento de Câmbio
+                            </button>
                         </div>
                     </div>
 
                     <!-- Visual Card 2 -->
                     <div class="spotlight-visual-card">
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.75rem;">
-                            <span style="font-size: 0.8125rem; font-weight: 700; color: #00BFFF; text-transform: uppercase;">Mesa de Operações Cambiais</span>
-                            <span style="font-size: 0.75rem; color: var(--text-silver);">Liquidação D+0 / D+2</span>
+                            <span style="font-size: 0.8125rem; font-weight: 700; color: #00BFFF; text-transform: uppercase;">Mesa de Câmbio & Comex</span>
+                            <span style="font-size: 0.75rem; color: var(--text-silver);">Rede Swift Conectada</span>
                         </div>
-                        <div style="background: rgba(0,0,0,0.25); padding: 1.25rem; border-radius: var(--radius-sm); display: flex; flex-direction: column; gap: 0.75rem;">
+                        <div style="background: rgba(0,0,0,0.25); padding: 1.25rem; border-radius: var(--radius-sm); display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.25rem;">
                             <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
-                                <span style="color: var(--text-silver);">Remessa Comercial:</span>
-                                <strong style="color: #FFFFFF;">USD / EUR / BRL</strong>
+                                <span style="color: var(--text-silver);">Natureza Cambial:</span>
+                                <strong style="color: #38A169;">Enquadramento Homologado</strong>
                             </div>
                             <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
-                                <span style="color: var(--text-silver);">Enquadramento BACEN:</span>
-                                <strong style="color: #38A169;">Homologado</strong>
+                                <span style="color: var(--text-silver);">Tributação (IOF / IRRF):</span>
+                                <strong style="color: #00BFFF;">Cálculo Automatizado</strong>
                             </div>
                             <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
-                                <span style="color: var(--text-silver);">Canais de Liquidação:</span>
-                                <strong style="color: #00BFFF;">Integrado Swift</strong>
+                                <span style="color: var(--text-silver);">Envio Internacional:</span>
+                                <strong style="color: #FFFFFF;">Mensagem Swift MT103</strong>
                             </div>
                         </div>
                         <div class="visual-metric-grid">
                             <div class="metric-box">
-                                <div class="metric-box-val">100%</div>
-                                <div class="metric-box-lbl">Conformidade Legal</div>
+                                <div class="metric-box-val">24h</div>
+                                <div class="metric-box-lbl">Prazo Médio de Liquidação</div>
                             </div>
                             <div class="metric-box">
-                                <div class="metric-box-val">24h</div>
-                                <div class="metric-box-lbl">Prazo Médio de Execução</div>
+                                <div class="metric-box-val">100%</div>
+                                <div class="metric-box-lbl">Conformidade Legal BACEN</div>
                             </div>
                         </div>
                     </div>
@@ -529,38 +535,38 @@
             </div>
         </section>
 
-        <!-- Section 4: Tradição e Números no Mercado (StoneX Stats Bar) -->
+        <!-- Section 4: Tradição e Números no Mercado Cambial (StoneX Stats Bar) -->
         <section id="tradicao" class="stats-section">
             <div class="container">
                 <div class="stats-grid">
                     <div class="stat-item">
                         <div class="stat-number">R$ 500M+</div>
-                        <div class="stat-label">Volume Processado</div>
+                        <div class="stat-label">Volume Cambial Negociado</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">10.000+</div>
-                        <div class="stat-label">Empresas e Clientes Ativos</div>
+                        <div class="stat-number">140+</div>
+                        <div class="stat-label">Moedas e Países Atendidos</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">99.9%</div>
-                        <div class="stat-label">Uptime de Plataforma</div>
+                        <div class="stat-number">D+0 a D+2</div>
+                        <div class="stat-label">Liquidação Flexível</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">&lt; 1s</div>
-                        <div class="stat-label">Tempo Médio de Resposta</div>
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Homologado Banco Central</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 5: Perguntas Frequentes / FAQ (StoneX Accordion Style) -->
+        <!-- Section 5: Perguntas Frequentes / FAQ de Câmbio Corporativo -->
         <section id="faq" class="section-padding faq-section">
             <div class="container">
                 <div class="section-header">
                     <span class="section-subtitle">Tire suas Dúvidas</span>
-                    <h2 class="section-title">Perguntas Frequentes</h2>
+                    <h2 class="section-title">Perguntas Frequentes sobre Câmbio Empresarial</h2>
                     <p class="section-desc">
-                        Encontre respostas diretas para as dúvidas mais comuns sobre nossos serviços financeiros, tecnologia e abertura de conta.
+                        Esclareça os principais pontos sobre contratação, documentação, prazos e proteção cambial para sua empresa.
                     </p>
                 </div>
 
@@ -568,12 +574,12 @@
                     <!-- FAQ 1 -->
                     <div class="faq-item">
                         <button class="faq-header" aria-expanded="false">
-                            <span>O que é a MIX CAPITAL e como funciona o gateway?</span>
+                            <span>O que é câmbio comercial para empresas e quando contratá-lo?</span>
                             <i data-lucide="chevron-down" class="faq-icon"></i>
                         </button>
                         <div class="faq-body">
                             <div class="faq-body-content">
-                                A MIX CAPITAL é uma instituição especializada em soluções financeiras e gateway de pagamentos corporativo. Nossa plataforma integra cartões, PIX instantâneo, boletos e conta digital em um ambiente unificado e seguro, proporcionando alta taxa de conversão e gestão em tempo real.
+                                O câmbio comercial corporativo é a operação de compra ou venda de moeda estrangeira realizada por pessoas jurídicas para liquidar compromissos internacionais. É contratado para pagar fornecedores de importação, receber recursos de exportação, transferir capitais (aportes, empréstimos ou dividendos) e pagar por serviços, softwares ou royalties no exterior.
                             </div>
                         </div>
                     </div>
@@ -581,12 +587,12 @@
                     <!-- FAQ 2 -->
                     <div class="faq-item">
                         <button class="faq-header" aria-expanded="false">
-                            <span>Quem pode contratar as soluções da MIX CAPITAL?</span>
+                            <span>Qual a diferença entre Câmbio Pronto (Spot) e Câmbio Futuro / Trava?</span>
                             <i data-lucide="chevron-down" class="faq-icon"></i>
                         </button>
                         <div class="faq-body">
                             <div class="faq-body-content">
-                                Nossos serviços atendem pessoas jurídicas (empresas de todos os portes, comércios eletrônicos, prestadores de serviços, indústrias e distribuidoras) e profissionais que necessitam de infraestrutura robusta para emissão de cobranças, recebimento de vendas e gestão financeira.
+                                No <strong>Câmbio Pronto (FX Spot)</strong>, a negociação da taxa e a liquidação dos recursos ocorrem de forma imediata (em D+0, D+1 ou D+2 dias úteis). Já no <strong>Câmbio Futuro (FX Forward / Trava)</strong>, a empresa fecha e fixa a taxa de câmbio hoje para liquidar o contrato em uma data futura pré-definida, protegendo seu fluxo de caixa contra a desvalorização cambial.
                             </div>
                         </div>
                     </div>
@@ -594,12 +600,12 @@
                     <!-- FAQ 3 -->
                     <div class="faq-item">
                         <button class="faq-header" aria-expanded="false">
-                            <span>Como funciona o recebimento via PIX e prazos de liquidação?</span>
+                            <span>O que é um contrato de NDF e como ele protege minha empresa?</span>
                             <i data-lucide="chevron-down" class="faq-icon"></i>
                         </button>
                         <div class="faq-body">
                             <div class="faq-body-content">
-                                As cobranças realizadas via PIX contam com liquidação instantânea em sua Conta Digital MIX CAPITAL. Você tem acesso imediato aos recursos para pagamentos, transferências ou saques, com extrato detalhado e confirmação em tempo real por webhook.
+                                O <strong>NDF (Non-Deliverable Forward)</strong> é um derivativo a termo que serve como hedge cambial sem a entrega física da moeda. A empresa fixa uma taxa de câmbio alvo para uma data de vencimento. Na data estipulada, compara-se a taxa contratada com a taxa oficial de mercado (PTAX divulgada pelo Banco Central) e liquida-se apenas a diferença em Reais. Isso elimina a volatilidade cambial das margens da empresa.
                             </div>
                         </div>
                     </div>
@@ -607,12 +613,12 @@
                     <!-- FAQ 4 -->
                     <div class="faq-item">
                         <button class="faq-header" aria-expanded="false">
-                            <span>A MIX CAPITAL realiza operações de câmbio e remessas internacionais?</span>
+                            <span>Quais documentos a empresa precisa apresentar para fechar câmbio?</span>
                             <i data-lucide="chevron-down" class="faq-icon"></i>
                         </button>
                         <div class="faq-body">
                             <div class="faq-body-content">
-                                Sim. Oferecemos suporte completo para operações de câmbio spot, pagamentos a fornecedores no exterior e recebimento de recursos internacionais, garantindo total conformidade com as exigências regulatórias do Banco Central do Brasil.
+                                Para operações de comércio exterior, são solicitados a fatura comercial (commercial invoice), o conhecimento de embarque (BL/AWB) e a declaração de importação (DI/DUIMP) ou DU-E no caso de exportação. Para serviços e capitais, solicita-se o contrato de prestação de serviços, contrato social com alteração de capital ou instrumento de mútuo. Nossa mesa auxilia em toda a triagem documental.
                             </div>
                         </div>
                     </div>
@@ -620,12 +626,12 @@
                     <!-- FAQ 5 -->
                     <div class="faq-item">
                         <button class="faq-header" aria-expanded="false">
-                            <span>Quais são os padrões de segurança e certificações adotadas?</span>
+                            <span>O que mudou com o Novo Marco Cambial (Lei nº 14.286/2021 e Resolução BCB nº 277/2022)?</span>
                             <i data-lucide="chevron-down" class="faq-icon"></i>
                         </button>
                         <div class="faq-body">
                             <div class="faq-body-content">
-                                Operamos com certificação internacional PCI DSS Level 1, criptografia ponta a ponta (TLS/SSL de 256 bits), monitoramento antifraude 24/7 e rígida política de conformidade com a LGPD (Lei Geral de Proteção de Dados).
+                                O Novo Marco Cambial simplificou substancialmente as regras cambiais no Brasil: extinguiu contratos de câmbio rígidos, reduziu a tabela de códigos de natureza cambial para operações de até US$ 50 mil, facilitou a manutenção de contas em moeda estrangeira por empresas e conferiu maior agilidade e concorrência aos operadores autorizados pelo Banco Central.
                             </div>
                         </div>
                     </div>
@@ -633,12 +639,12 @@
                     <!-- FAQ 6 -->
                     <div class="faq-item">
                         <button class="faq-header" aria-expanded="false">
-                            <span>Quanto tempo leva para aprovação da conta PJ?</span>
+                            <span>Como iniciar as operações de câmbio na MIX CAPITAL?</span>
                             <i data-lucide="chevron-down" class="faq-icon"></i>
                         </button>
                         <div class="faq-body">
                             <div class="faq-body-content">
-                                Nosso processo de credenciamento é 100% digital. Após o envio dos documentos cadastrais da empresa, a análise e liberação da conta ocorrem em até 24 horas úteis.
+                                O cadastramento é 100% digital e rápido. Após o envio dos documentos societários e fiscais da empresa, o limite operacional é aprovado em até 24 horas. A partir disso, sua empresa conta com um operador dedicado na mesa para cotações e fechamentos em tempo real.
                             </div>
                         </div>
                     </div>
@@ -652,22 +658,22 @@
                 <div class="cta-banner-card">
                     <span class="badge-pill dark" style="margin-bottom: 1rem;">
                         <span class="dot"></span>
-                        Pronto para começar?
+                        Mesa de Câmbio Corporativo
                     </span>
                     <h2 class="cta-banner-title">
-                        Transforme a gestão de pagamentos do seu negócio hoje mesmo
+                        Pronto para otimizar as operações de câmbio da sua empresa?
                     </h2>
                     <p class="cta-banner-desc">
-                        Abra sua conta na MIX CAPITAL e conte com tecnologia de ponta, taxas competitivas e suporte dedicado.
+                        Conecte seu negócio aos mercados globais com taxas competitivas, spreads transparentes e acompanhamento consultivo da nossa mesa de operações.
                     </p>
                     <div class="cta-banner-actions">
-                        <a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-                            Abra sua conta agora
+                        <button onclick="openContactModal()" class="btn btn-primary btn-lg">
+                            Falar com a Mesa de Câmbio
                             <i data-lucide="arrow-right"></i>
-                        </a>
+                        </button>
                         <button onclick="openContactModal()" class="btn btn-ghost-white btn-lg">
-                            <i data-lucide="phone-call"></i>
-                            Falar com um Consultor
+                            <i data-lucide="calculator"></i>
+                            Solicitar Diagnóstico Cambial
                         </button>
                     </div>
                 </div>
@@ -685,7 +691,7 @@
                 <div class="footer-brand-col">
                     <img src="assets/images/logo.png" alt="Logotipo MIX CAPITAL" class="footer-logo-img">
                     <p class="footer-about-text">
-                        Ecossistema completo em gateway de pagamentos, conta digital PJ, PIX, boletos e operações de câmbio para impulsionar empresas no mercado nacional e internacional.
+                        Mesa especializada em câmbio comercial corporativo, soluções de hedge cambial (NDF), câmbio pronto, câmbio futuro e operações financeiras de comércio exterior para empresas.
                     </p>
                     <div class="footer-social-links">
                         <a href="#" class="footer-social-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
@@ -694,16 +700,16 @@
                     </div>
                 </div>
 
-                <!-- Col 2: Soluções -->
+                <!-- Col 2: Soluções Cambiais -->
                 <div>
-                    <h4 class="footer-col-title">Soluções</h4>
+                    <h4 class="footer-col-title">Soluções Cambiais</h4>
                     <ul class="footer-links-list">
-                        <li><a href="#solucoes">Gateway de Pagamentos</a></li>
-                        <li><a href="#solucoes">PIX para Empresas</a></li>
-                        <li><a href="#solucoes">Conta Digital PJ</a></li>
-                        <li><a href="#solucoes">Câmbio & Remessas</a></li>
-                        <li><a href="#solucoes">Link de Pagamento</a></li>
-                        <li><a href="#solucoes">Boleto Bancário</a></li>
+                        <li><a href="#solucoes">Câmbio Pronto (FX Spot)</a></li>
+                        <li><a href="#solucoes">Câmbio Futuro (FX Forward)</a></li>
+                        <li><a href="#hedge">Proteção Cambial (NDF)</a></li>
+                        <li><a href="#comex">Importação & Exportação</a></li>
+                        <li><a href="#comex">Capitais Internacionais</a></li>
+                        <li><a href="#solucoes">Serviços & Royalties</a></li>
                     </ul>
                 </div>
 
@@ -711,18 +717,18 @@
                 <div>
                     <h4 class="footer-col-title">Institucional</h4>
                     <ul class="footer-links-list">
-                        <li><a href="#diferenciais">Sobre a MIX CAPITAL</a></li>
-                        <li><a href="#diferenciais">Diferenciais e Taxas</a></li>
-                        <li><a href="#tradicao">Estrutura e Governança</a></li>
+                        <li><a href="#diferenciais">Sobre a Mesa de Câmbio</a></li>
+                        <li><a href="#diferenciais">Diferenciais e Spreads</a></li>
+                        <li><a href="#tradicao">Estrutura & Governança</a></li>
                         <li><a href="#faq">Perguntas Frequentes</a></li>
-                        <li><button onclick="openContactModal()">Fale Conosco</button></li>
-                        <li><a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer">Acesso ao Internet Banking</a></li>
+                        <li><button onclick="openContactModal()">Falar com Operador</button></li>
+                        <li><a href="https://acessoaconta.com.br/Login/mixcapital" target="_blank" rel="noopener noreferrer">Acesso à Plataforma</a></li>
                     </ul>
                 </div>
 
                 <!-- Col 4: Contato & Sede -->
                 <div>
-                    <h4 class="footer-col-title">Contato & Sede</h4>
+                    <h4 class="footer-col-title">Mesa de Câmbio & Sede</h4>
                     <div class="footer-contact-info">
                         <div class="footer-contact-item">
                             <i data-lucide="mail"></i>
@@ -745,9 +751,9 @@
                             <strong>CNPJ:</strong> 61.853.820/0001-10
                         </div>
                         <div class="footer-cert-badges">
-                            <span class="cert-badge">PCI DSS Level 1</span>
-                            <span class="cert-badge">BACEN</span>
-                            <span class="cert-badge">ISO 27001</span>
+                            <span class="cert-badge">HOMOLOGADO BACEN</span>
+                            <span class="cert-badge">RESOLUÇÃO BCB 277/2022</span>
+                            <span class="cert-badge">PCI DSS LEVEL 1</span>
                         </div>
                     </div>
                 </div>
@@ -756,7 +762,7 @@
             <!-- Institutional Legal Disclaimer (StoneX Model) -->
             <div class="footer-disclaimer-box">
                 <p class="disclaimer-text">
-                    A <strong>MIX CAPITAL GTW LTDA</strong> (CNPJ 61.853.820/0001-10) atua como instituição de pagamento e correspondente de instituições financeiras autorizadas a funcionar pelo Banco Central do Brasil. A contratação de produtos e serviços está sujeita à análise de conformidade, verificação cadastral e condições contratuais vigentes. As transações são processadas sob estritos protocolos de segurança da informação e certificação PCI DSS. As informações contidas neste website têm finalidade exclusivamente institucional e informativa.
+                    A <strong>MIX CAPITAL GTW LTDA</strong> (CNPJ 61.853.820/0001-10) atua na intermediação de operações no mercado de câmbio em estrita conformidade com as diretrizes do Banco Central do Brasil (“BACEN”) e normativos aplicáveis, incluindo a Lei nº 14.286/2021 e a Resolução BCB nº 277/2022. As operações de câmbio, derivativos a termo (NDF) e instrumentos de hedge envolvem riscos de mercado, incluindo oscilações nas taxas de câmbio e flutuações da PTAX, não constituindo garantia de rentabilidade futura. O cliente é responsável pela correta classificação e declaração da finalidade da operação cambial. A contratação de produtos e serviços está sujeita à análise cadastral, elegibilidade e condições vigentes. As informações disponibilizadas têm caráter institucional e informativo.
                 </p>
             </div>
 
@@ -774,11 +780,11 @@
         </div>
     </footer>
 
-    <!-- Contact Modal -->
+    <!-- Contact / FX Quote Modal -->
     <div id="contact-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
         <div class="modal-dialog">
             <div class="modal-header">
-                <h3 id="contact-modal-title" class="modal-title">Fale com a MIX CAPITAL</h3>
+                <h3 id="contact-modal-title" class="modal-title">Fale com a Mesa de Câmbio</h3>
                 <button class="modal-close-btn" onclick="closeContactModal()" aria-label="Fechar modal">
                     <i data-lucide="x"></i>
                 </button>
@@ -788,7 +794,7 @@
                     <div class="form-grid">
                         <div class="form-grid two-col">
                             <div class="form-group">
-                                <label for="form-name" class="form-label">Nome Completo *</label>
+                                <label for="form-name" class="form-label">Nome Completo / Razão Social *</label>
                                 <input type="text" id="form-name" name="name" class="form-input" placeholder="Seu nome ou da empresa" required>
                             </div>
                             <div class="form-group">
@@ -803,18 +809,27 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="form-subject" class="form-label">Assunto de Interesse *</label>
-                            <input type="text" id="form-subject" name="subject" class="form-input" placeholder="Ex: Gateway, PIX, Câmbio ou Conta Digital" required>
+                            <label for="form-subject" class="form-label">Tipo de Operação Cambial *</label>
+                            <select id="form-subject" name="subject" class="form-input" required>
+                                <option value="" disabled selected>Selecione a modalidade de câmbio</option>
+                                <option value="Câmbio Pronto (Spot)">Câmbio Pronto (FX Spot)</option>
+                                <option value="Câmbio Futuro (Trava)">Câmbio Futuro (FX Forward / Trava)</option>
+                                <option value="Hedge Cambial (NDF)">Proteção Cambial / Hedge (NDF)</option>
+                                <option value="Importação">Pagamento de Importação (Comex)</option>
+                                <option value="Exportação">Recebimento de Exportação (Comex)</option>
+                                <option value="Capitais Estrangeiros">Aporte de Capital / Empréstimo Externo</option>
+                                <option value="Serviços Internacionais">Pagamento de Serviços / Softwares / Royalties</option>
+                            </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="form-message" class="form-label">Mensagem *</label>
-                            <textarea id="form-message" name="message" class="form-textarea" placeholder="Descreva sua necessidade ou volume estimado..." required></textarea>
+                            <label for="form-message" class="form-label">Volume Estimado ou Detalhes da Demanda *</label>
+                            <textarea id="form-message" name="message" class="form-textarea" placeholder="Informe a moeda (USD, EUR, etc.), volume estimado ou prazo da operação..." required></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-full" style="margin-top: 0.5rem;">
                             <i data-lucide="send"></i>
-                            Enviar Mensagem
+                            Solicitar Cotação Cambial
                         </button>
                     </div>
                 </form>
@@ -834,7 +849,7 @@
     </div>
 
     <!-- Floating WhatsApp Action -->
-    <a href="https://wa.me/5521996654829" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contato direto via WhatsApp">
+    <a href="https://wa.me/5521996654829" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contato direto via WhatsApp com a Mesa de Câmbio">
         <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 0C7.163 0 0 7.163 0 16c0 2.828.738 5.583 2.139 7.989L.434 30.863a.999.999 0 001.302 1.302l6.874-1.705A15.946 15.946 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333c-2.576 0-5.099-.745-7.261-2.151a1 1 0 00-.764-.117l-4.608 1.143 1.143-4.608a1 1 0 00-.117-.764A13.278 13.278 0 012.667 16c0-7.364 5.969-13.333 13.333-13.333S29.333 8.636 29.333 16 23.364 29.333 16 29.333z"/>
             <path d="M23.247 19.433c-.387-.194-2.292-1.131-2.647-1.26-.355-.129-.614-.194-.873.194-.258.387-1.003 1.26-1.229 1.519-.226.258-.452.29-.839.097-.387-.194-1.634-.603-3.113-1.922-1.151-1.027-1.928-2.295-2.154-2.682-.226-.387-.024-.597.17-.79.174-.174.387-.452.581-.678.194-.226.258-.387.387-.645.129-.258.065-.484-.032-.678-.097-.194-.873-2.103-1.196-2.878-.314-.754-.634-.651-.873-.663-.226-.011-.484-.013-.742-.013s-.678.097-1.034.484c-.355.387-1.357 1.326-1.357 3.234s1.389 3.75 1.583 4.008c.194.258 2.735 4.177 6.625 5.856.926.4 1.649.638 2.212.817.929.295 1.775.253 2.443.153.745-.111 2.292-.937 2.615-1.842.323-.905.323-1.681.226-1.842-.097-.161-.355-.258-.742-.452z"/>
