@@ -374,29 +374,32 @@ function initContactForm() {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        const name = form.querySelector('[name="name"]').value;
-        const email = form.querySelector('[name="email"]').value;
-        const phone = form.querySelector('[name="phone"]').value;
-        const message = form.querySelector('[name="message"]').value;
+        const name = form.querySelector('[name="name"]')?.value || '';
+        const email = form.querySelector('[name="email"]')?.value || '';
+        const phone = form.querySelector('[name="phone"]')?.value || '';
+        const subject = form.querySelector('[name="subject"]')?.value || 'Câmbio Corporativo';
+        const message = form.querySelector('[name="message"]')?.value || '';
 
         if (!name || !email || !phone || !message) {
             showToast('Por favor, preencha todos os campos obrigatórios.');
             return;
         }
 
-        // Simular envio ou preparar request
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = 'Enviando...';
+        // Montar mensagem formatada para o WhatsApp
+        const whatsappText = `*Solicitação de Cotação Cambial - MIX CAPITAL*
 
-        setTimeout(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalText;
-            closeContactModal();
-            form.reset();
-            showToast('Mensagem enviada com sucesso! Nossa equipe entrará em contato.');
-        }, 800);
+*Nome / Razão Social:* ${name.trim()}
+*Telefone:* ${phone.trim()}
+*E-mail:* ${email.trim()}
+*Tipo de Operação:* ${subject.trim()}
+*Detalhes / Volume Estimado:* ${message.trim()}`;
+
+        const whatsappUrl = `https://wa.me/5521996654829?text=${encodeURIComponent(whatsappText)}`;
+
+        // Fechar modal, limpar formulário e abrir WhatsApp
+        closeContactModal();
+        form.reset();
+        window.open(whatsappUrl, '_blank');
     });
 }
 
