@@ -288,45 +288,10 @@ button {
     font-weight: 600;
 }
 
-/* Mobile Top Bar: cada item em uma única linha de texto e tamanho bem legível */
+/* Ocultar top-bar no mobile */
 @media (max-width: 768px) {
     .top-bar {
-        padding: 0.65rem 0;
-    }
-
-    .top-bar-row {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        width: 100%;
-    }
-
-    .top-bar-left, .top-bar-right {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        width: 100%;
-    }
-
-    .hide-mobile {
         display: none !important;
-    }
-
-    .top-bar-item {
-        font-size: 0.875rem; /* 14px - tamanho legível */
-        white-space: nowrap;
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-        line-height: 1.4;
-    }
-
-    .top-bar-item svg {
-        width: 15px;
-        height: 15px;
     }
 }
 
